@@ -1,25 +1,29 @@
-import React from 'react';
+import React, { Component,Fragment } from 'react';
 import ReactDOM from 'react-dom';
+import Footer from './Footer';
+import Header from './Header';
+import { BrowserRouter as Router, Route, Link ,Switch} from 'react-router-dom';
 
-function Example() {
-    return (
-        <div className="container">
-            <div className="row justify-content-center">
-                <div className="col-md-8">
-                    <div className="card">
-                        <div className="card-header">Example Component sssss
-                        <h1 className="h4">hola ssss </h1>
-                        </div>
-                       
-                        <div className="card-body">I'm an example component!</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+export default class Example extends Component {
+    render() {
+        return (
+            <Router>
+            <Fragment>
+            
+             <Header/>
+             <div>
+             <Switch>
+                  <Route  exact path="/cabeza" component={Header } /   >  
+                  <Route  exact path="/pie" component={Footer } /   >  
+             </Switch>
+             </div>
+            <Footer/>
+            
+            </Fragment>
+            </Router>
+        );
+    }
 }
-
-export default Example;
 
 if (document.getElementById('example')) {
     ReactDOM.render(<Example />, document.getElementById('example'));
