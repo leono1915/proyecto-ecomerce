@@ -96,8 +96,8 @@ export default class Header extends Component {
 					<div className="shop-menu clearfix pull-right item active ">
 						<h1><span> Rapidez</span> Es Nuestro Compromiso</h1>
 						<ul className="nav navbar-nav">
-							<li><Link to="/cabeza"><i className="fa fa-user"></i> Cuenta</Link></li>
-							<li><Link to="/pie"><i className="fa fa-star"></i> Wishlist</Link></li>
+							<li><Link to="/pie"><i className="fa fa-user"></i> Cuenta</Link></li>
+							<li><Link to="/cabeza"><i className="fa fa-star"></i> Wishlist</Link></li>
 							<li><a href="checkout.html"><i className="fa fa-crosshairs"></i> Checkout</a></li>
 							<li><a href="cart.html"><i className="fa fa-shopping-cart"></i> Carrito</a></li>
 							<li><a href="login.html"><i className="fa fa-lock"></i> Login</a></li>

@@ -1,7 +1,7 @@
 
 
 import React, { Component,Fragment } from 'react'
-
+import ReactDOM from 'react-dom';
 
 
 export default class Footer extends Component {
@@ -94,3 +94,6 @@ export default class Footer extends Component {
         );
     }
 } 
+
+
+ReactDOM.render(<Footer />, document.getElementById('footer'));

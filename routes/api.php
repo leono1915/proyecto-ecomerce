@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::get('producto_venta', 'Producto_controller@index');
+Route::get('producto_venta', 'Producto_controller@index')->middleware('auth');
 Route::post('productos', 'Producto_controller@store');
 Route::get('productos/{id}', 'Producto_controller@show');
 Route::put('productos/{id}', 'Producto_controller@markAsCompleted');
