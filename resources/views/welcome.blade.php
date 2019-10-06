@@ -163,26 +163,7 @@
 		</div>
 		<!--/header-bottom-->
 	</header>
-      <!--  <div id="e">
-
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-                            
-        </div>
--->
+      <div id="galery"></div>
 <div id="footer"></div>
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/js/jquery.js') }}"></script>

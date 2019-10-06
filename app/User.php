@@ -27,7 +27,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
+    public function ventas(){
+        return $this->hasMaany(Venta::class);
+    }
     /**
      * The attributes that should be cast to native types.
      *
