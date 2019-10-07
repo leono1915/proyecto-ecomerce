@@ -8,6 +8,12 @@ use App\Productoventa;
 class Producto_controller extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    
    public function index()
       {
         $projects = Productoventa::where('id_user', auth()->id())

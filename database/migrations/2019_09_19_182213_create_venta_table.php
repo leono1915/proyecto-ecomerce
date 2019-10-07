@@ -17,15 +17,17 @@ class CreateVentaTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('id_user')->unsigned();
             $table->bigInteger('id_productos')->unsigned();
-           
+            $table->decimal('cantidad_descontar',10,2);
+            $table->integer('folio');
+            $table->enum('facturado',['SI','NO']);
             $table->text('descripcion');
             $table->decimal('subtotal',10,2);
             $table->decimal('iva',10,2);
             $table->decimal('total',10,2);
             $table->foreign('id_user')->references('id')->on('users');
-           
-            $table->foreign('id_productos')->references('id')->on('productoventas');
-            $table->timestamps();
+            
+            $table->foreign('id_productos')->references('id')->on('productos');
+            $table->date('fecha');
         });
     }
 

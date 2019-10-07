@@ -2,7 +2,7 @@ import React, { Component,Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import Footer from './Footer';
 import Header from './Header';
-import Galeriaprincipal from './galeriaprincipal';
+
 import { BrowserRouter as Router, Route, Redirect,Link ,Switch} from 'react-router-dom';
 
 export default class Example extends Component {
@@ -14,8 +14,8 @@ export default class Example extends Component {
             
              <div>
              <Switch>
-                  <Route  path="/pie" component={Header } /   >  
-                  <Route  path="/cabeza" component={Footer } /   >  
+                  <Route  exact path="/pie" component={Header } /   >  
+                  <Route  exact path="/cabeza" component={Footer } /   >  
              </Switch>
              </div>
             
