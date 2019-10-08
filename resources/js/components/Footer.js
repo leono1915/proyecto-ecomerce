@@ -20,9 +20,63 @@ export default class Footer extends Component {
            <Fragment>
                 <footer id="footer">
             
-            <div className="footer-top">
-               
-            </div>
+                <div className="footer-top">
+			<div className="container">
+				<div className="row">
+					<div className="col-sm-2">
+						<div className="companyinfo">
+							<h2><span>p</span>-lasma cut</h2>
+							<p>CORTE CON PLASMA CNC <br/> VISITE NUESTROS SERVICIOS </p>
+						</div>
+					</div>
+					<div className="col-sm-7">
+						
+						
+						<div className="col-sm-3">
+							<div className="video-gallery text-center">
+								<a href="#">
+									<div className="iframe-img">
+										<img src={require('../../../images/visa.png')} alt="" />
+									</div>
+									
+								</a>
+								
+							</div>
+						</div>
+						
+						<div className="col-sm-3">
+							<div className="video-gallery text-center">
+								<a href="#">
+									<div className="iframe-img">
+										<img src={require('../../../images/master.png')} alt="" />
+									</div>
+									
+								</a>
+								
+							</div>
+						</div>
+						
+						<div className="col-sm-3">
+							<div className="video-gallery text-center">
+								<a href="#">
+									<div className="iframe-img">
+										<img src={require('../../../images/pay.png')} alt="" />
+									</div>
+									
+								</a>
+								
+							</div>
+						</div>
+					</div>
+					<div className="col-sm-3">
+						<div className="address">
+							<img src={require('../../../images/home/map.png')} alt="" />
+							<p>Una empresa de calidad mundial</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
     
             <div className="footer-widget">
                 <div className="container">

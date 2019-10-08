@@ -175,7 +175,7 @@
               
                     @auth
                     <li><a href="{{ route('home') }}"><i class="fa fa-user"></i> Mi Cuenta</a></li>
-                    <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Carrito</a></li>
+                    <li><a href="/carrito"><i class="fa fa-shopping-cart"></i> Carrito</a></li>
                    
                     @else
                        
@@ -237,6 +237,7 @@
 		</main>
 	
 	</div>
+	<div id="example"></div>
 	<div id="footer"><div>
 </body>
 </html>

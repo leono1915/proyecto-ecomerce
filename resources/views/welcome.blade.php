@@ -163,7 +163,7 @@
 		</div>
 		<!--/header-bottom-->
 	</header>
-      <div id="galery"></div>
+    <div id="example"></div> 
 <div id="footer"></div>
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/js/jquery.js') }}"></script>

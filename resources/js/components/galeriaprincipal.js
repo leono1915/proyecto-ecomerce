@@ -209,7 +209,7 @@ export default class Galeriaprincipal  extends Component {
                 </div>
 
                 <div className="shipping text-center">
-                    <img src="images/download.jpg" alt="" />
+                    <img src={require('../../../images/download.jpg')} alt="" />
                 </div>
 
             </div>
@@ -559,4 +559,4 @@ export default class Galeriaprincipal  extends Component {
 } 
 
 
-ReactDOM.render(<Galeriaprincipal />, document.getElementById('galery'));
+//ReactDOM.render(<Galeriaprincipal />, document.getElementById('galery'));

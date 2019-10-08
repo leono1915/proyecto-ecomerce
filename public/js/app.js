@@ -86,14 +86,267 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./images/img/logo_opt.png":
-/*!*********************************!*\
-  !*** ./images/img/logo_opt.png ***!
-  \*********************************/
+/***/ "./images/download.jpg":
+/*!*****************************!*\
+  !*** ./images/download.jpg ***!
+  \*****************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/logo_opt.png?39a154ab3aab6ab59f86df5d39c0abbf";
+module.exports = "/images/download.jpg?3c49f70f77882319add1f9c5d869de23";
+
+/***/ }),
+
+/***/ "./images/home/map.png":
+/*!*****************************!*\
+  !*** ./images/home/map.png ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/map.png?27b94db5a5be0bfcc13a8f922d34e576";
+
+/***/ }),
+
+/***/ "./images/img/angulo.jpg":
+/*!*******************************!*\
+  !*** ./images/img/angulo.jpg ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/angulo.jpg?26f3d009bdde85141f5f8de6b1b3f130";
+
+/***/ }),
+
+/***/ "./images/img/ant.jpg":
+/*!****************************!*\
+  !*** ./images/img/ant.jpg ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/ant.jpg?f4fa57f760dbaec68103798278b0fbd4";
+
+/***/ }),
+
+/***/ "./images/img/canal.jpg":
+/*!******************************!*\
+  !*** ./images/img/canal.jpg ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/canal.jpg?c7d3b218f224aa9370f09a2946c64952";
+
+/***/ }),
+
+/***/ "./images/img/cold.jpg":
+/*!*****************************!*\
+  !*** ./images/img/cold.jpg ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/cold.jpg?21c1459ff1aeb12984c98528ccb95972";
+
+/***/ }),
+
+/***/ "./images/img/cua.jpg":
+/*!****************************!*\
+  !*** ./images/img/cua.jpg ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/cua.jpg?6b5c09d99b15e72f014df72a82cd0420";
+
+/***/ }),
+
+/***/ "./images/img/lamina.jpg":
+/*!*******************************!*\
+  !*** ./images/img/lamina.jpg ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/lamina.jpg?5c9e39f8d041236178d75f92c7e078c3";
+
+/***/ }),
+
+/***/ "./images/img/placa.jpg":
+/*!******************************!*\
+  !*** ./images/img/placa.jpg ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/placa.jpg?82d864217823e875a3e8a9758864154f";
+
+/***/ }),
+
+/***/ "./images/img/polin.jpg":
+/*!******************************!*\
+  !*** ./images/img/polin.jpg ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/polin.jpg?15cdb2ffeaa70114593726e047ae2a70";
+
+/***/ }),
+
+/***/ "./images/img/ptr.jpg":
+/*!****************************!*\
+  !*** ./images/img/ptr.jpg ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/ptr.jpg?63d4e475287a43fc3efc80d2b733e22d";
+
+/***/ }),
+
+/***/ "./images/img/redondo.jpg":
+/*!********************************!*\
+  !*** ./images/img/redondo.jpg ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/redondo.jpg?d0ea4f2ad8afa4a26b77ddb753ceb0be";
+
+/***/ }),
+
+/***/ "./images/img/solera.jpg":
+/*!*******************************!*\
+  !*** ./images/img/solera.jpg ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/solera.jpg?c5e7ac851a9fb9f6cc571212b95edadb";
+
+/***/ }),
+
+/***/ "./images/img/tubo.jpg":
+/*!*****************************!*\
+  !*** ./images/img/tubo.jpg ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/tubo.jpg?44062a3ba6d6952fdb839815fd07ff47";
+
+/***/ }),
+
+/***/ "./images/img/tubu.jpg":
+/*!*****************************!*\
+  !*** ./images/img/tubu.jpg ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/tubu.jpg?188127cd4ab697c35ba5887df7f5355b";
+
+/***/ }),
+
+/***/ "./images/img/vari.jpg":
+/*!*****************************!*\
+  !*** ./images/img/vari.jpg ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/vari.jpg?8ef597691fa8dac6723df60fd0d842f9";
+
+/***/ }),
+
+/***/ "./images/img/viga.jpg":
+/*!*****************************!*\
+  !*** ./images/img/viga.jpg ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/viga.jpg?02dc6a287d1340478e246b98f3516c35";
+
+/***/ }),
+
+/***/ "./images/master.png":
+/*!***************************!*\
+  !*** ./images/master.png ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/master.png?aeb9c10275cf045b0cb147957323ab32";
+
+/***/ }),
+
+/***/ "./images/pay.png":
+/*!************************!*\
+  !*** ./images/pay.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/pay.png?cd23289a992e4f756e4484e95de5b6df";
+
+/***/ }),
+
+/***/ "./images/slider10.jpg":
+/*!*****************************!*\
+  !*** ./images/slider10.jpg ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/slider10.jpg?13c5d1bc3869472439cebebf68ae2a7d";
+
+/***/ }),
+
+/***/ "./images/slider4.jpg":
+/*!****************************!*\
+  !*** ./images/slider4.jpg ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/slider4.jpg?cd60a6c4c19e1c62b1001f591e14cca2";
+
+/***/ }),
+
+/***/ "./images/slider6.jpg":
+/*!****************************!*\
+  !*** ./images/slider6.jpg ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/slider6.jpg?2089514f836d9e2de9320d8224d44609";
+
+/***/ }),
+
+/***/ "./images/slider9.jpg":
+/*!****************************!*\
+  !*** ./images/slider9.jpg ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/slider9.jpg?b90dda7412a0b258b14e8cb3c0123b8d";
+
+/***/ }),
+
+/***/ "./images/visa.png":
+/*!*************************!*\
+  !*** ./images/visa.png ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/visa.png?bcf4da9a99a6e59e1e30a4988c1a5e0b";
 
 /***/ }),
 
@@ -64621,7 +64874,7 @@ if (false) {} else {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -64782,12 +65035,14 @@ var normalizeToLocation = function normalizeToLocation(to, currentLocation) {
   return typeof to === "string" ? Object(history__WEBPACK_IMPORTED_MODULE_3__["createLocation"])(to, null, null, currentLocation) : to;
 };
 
+var forwardRefShim = function forwardRefShim(C) {
+  return C;
+};
+
 var forwardRef = react__WEBPACK_IMPORTED_MODULE_2___default.a.forwardRef;
 
 if (typeof forwardRef === "undefined") {
-  forwardRef = function forwardRef(C) {
-    return C;
-  };
+  forwardRef = forwardRefShim;
 }
 
 function isModifiedEvent(event) {
@@ -64801,8 +65056,8 @@ var LinkAnchor = forwardRef(function (_ref, forwardedRef) {
       rest = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_7__["default"])(_ref, ["innerRef", "navigate", "onClick"]);
 
   var target = rest.target;
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({}, rest, {
-    ref: forwardedRef || innerRef,
+
+  var props = Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({}, rest, {
     onClick: function onClick(event) {
       try {
         if (_onClick) _onClick(event);
@@ -64820,7 +65075,16 @@ var LinkAnchor = forwardRef(function (_ref, forwardedRef) {
           navigate();
         }
     }
-  }));
+  }); // React 15 compat
+
+
+  if (forwardRefShim !== forwardRef) {
+    props.ref = forwardedRef || innerRef;
+  } else {
+    props.ref = innerRef;
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", props);
 });
 
 if (true) {
@@ -64844,15 +65108,24 @@ var Link = forwardRef(function (_ref2, forwardedRef) {
     var history = context.history;
     var location = normalizeToLocation(resolveToLocation(to, context.location), context.location);
     var href = location ? history.createHref(location) : "";
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({}, rest, {
-      ref: forwardedRef || innerRef,
+
+    var props = Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({}, rest, {
       href: href,
       navigate: function navigate() {
         var location = resolveToLocation(to, context.location);
         var method = replace ? history.replace : history.push;
         method(location);
       }
-    }));
+    }); // React 15 compat
+
+
+    if (forwardRefShim !== forwardRef) {
+      props.ref = forwardedRef || innerRef;
+    } else {
+      props.innerRef = innerRef;
+    }
+
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(component, props);
   });
 });
 
@@ -64871,12 +65144,14 @@ if (true) {
   };
 }
 
+var forwardRefShim$1 = function forwardRefShim(C) {
+  return C;
+};
+
 var forwardRef$1 = react__WEBPACK_IMPORTED_MODULE_2___default.a.forwardRef;
 
 if (typeof forwardRef$1 === "undefined") {
-  forwardRef$1 = function forwardRef(C) {
-    return C;
-  };
+  forwardRef$1 = forwardRefShim$1;
 }
 
 function joinClassnames() {
@@ -64924,13 +65199,22 @@ var NavLink = forwardRef$1(function (_ref, forwardedRef) {
     var isActive = !!(isActiveProp ? isActiveProp(match, currentLocation) : match);
     var className = isActive ? joinClassnames(classNameProp, activeClassName) : classNameProp;
     var style = isActive ? Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({}, styleProp, {}, activeStyle) : styleProp;
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Link, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({
-      ref: forwardedRef || innerRef,
+
+    var props = Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_6__["default"])({
       "aria-current": isActive && ariaCurrent || null,
       className: className,
       style: style,
       to: toLocation
-    }, rest));
+    }, rest); // React 15 compat
+
+
+    if (forwardRefShim$1 !== forwardRef$1) {
+      props.ref = forwardedRef || innerRef;
+    } else {
+      props.innerRef = innerRef;
+    }
+
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Link, props);
   });
 });
 
@@ -65360,7 +65644,7 @@ function matchPath(pathname, options) {
       sensitive = _options$sensitive === void 0 ? false : _options$sensitive;
   var paths = [].concat(path);
   return paths.reduce(function (matched, path) {
-    if (!path) return null;
+    if (!path && path !== "") return null;
     if (matched) return matched;
 
     var _compilePath = compilePath$1(path, {
@@ -65716,11 +66000,12 @@ function useParams() {
     !(typeof useContext === "function") ?  true ? Object(tiny_invariant__WEBPACK_IMPORTED_MODULE_6__["default"])(false, "You must use React >= 16.8 in order to use useParams()") : undefined : void 0;
   }
 
-  return useContext(context).match.params;
+  var match = useContext(context).match;
+  return match ? match.params : {};
 }
 function useRouteMatch(path) {
   if (true) {
-    !(typeof useContext === "function") ?  true ? Object(tiny_invariant__WEBPACK_IMPORTED_MODULE_6__["default"])(false, "You must use React >= 16.8 in order to use useMatch()") : undefined : void 0;
+    !(typeof useContext === "function") ?  true ? Object(tiny_invariant__WEBPACK_IMPORTED_MODULE_6__["default"])(false, "You must use React >= 16.8 in order to use useRouteMatch()") : undefined : void 0;
   }
 
   return path ? matchPath(useLocation().pathname, path) : useContext(context).match;
@@ -70253,8 +70538,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Footer */ "./resources/js/components/Footer.js");
-/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Header */ "./resources/js/components/Header.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _formularioenvio__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./formularioenvio */ "./resources/js/components/formularioenvio.js");
+/* harmony import */ var _galeriaprincipal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./galeriaprincipal */ "./resources/js/components/galeriaprincipal.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -70279,6 +70565,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var Example =
 /*#__PURE__*/
 function (_Component) {
@@ -70293,14 +70580,26 @@ function (_Component) {
   _createClass(Example, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Link"], {
+        to: "/datosenvio"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fa fa-user"
+      }), " Cuenta")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Link"], {
+        to: "/carrito"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fa fa-star"
+      }), " Wishlist")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
         exact: true,
-        path: "/pie",
-        component: _Header__WEBPACK_IMPORTED_MODULE_3__["default"]
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
+        path: "/datosenvio",
+        component: _formularioenvio__WEBPACK_IMPORTED_MODULE_3__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
         exact: true,
-        path: "/cabeza",
+        path: "/carrito",
         component: _Footer__WEBPACK_IMPORTED_MODULE_2__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
+        exact: true,
+        path: "/",
+        component: _galeriaprincipal__WEBPACK_IMPORTED_MODULE_4__["default"]
       })))));
     }
   }]);
@@ -70311,7 +70610,7 @@ function (_Component) {
 
 
 if (document.getElementById('example')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Example, null)), document.getElementById('example'));
+  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Example, null)), document.getElementById('example'));
 }
 
 /***/ }),
@@ -70377,7 +70676,57 @@ function (_Component) {
         id: "footer"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "footer-top"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "companyinfo"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "p"), "-lasma cut"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "CORTE CON PLASMA CNC ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " VISITE NUESTROS SERVICIOS "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-7"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-3"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "video-gallery text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "iframe-img"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: __webpack_require__(/*! ../../../images/visa.png */ "./images/visa.png"),
+        alt: ""
+      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-3"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "video-gallery text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "iframe-img"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: __webpack_require__(/*! ../../../images/master.png */ "./images/master.png"),
+        alt: ""
+      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-3"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "video-gallery text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "iframe-img"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: __webpack_require__(/*! ../../../images/pay.png */ "./images/pay.png"),
+        alt: ""
+      })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-3"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "address"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: __webpack_require__(/*! ../../../images/home/map.png */ "./images/home/map.png"),
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Una empresa de calidad mundial")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "footer-widget"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
@@ -70473,21 +70822,258 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 
 /***/ }),
 
-/***/ "./resources/js/components/Header.js":
-/*!*******************************************!*\
-  !*** ./resources/js/components/Header.js ***!
-  \*******************************************/
+/***/ "./resources/js/components/formularioenvio.js":
+/*!****************************************************!*\
+  !*** ./resources/js/components/formularioenvio.js ***!
+  \****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Header; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _images_img_logo_opt_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../images/img/logo_opt.png */ "./images/img/logo_opt.png");
-/* harmony import */ var _images_img_logo_opt_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_images_img_logo_opt_png__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+var Formularioenvio =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Formularioenvio, _Component);
+
+  function Formularioenvio() {
+    var _this;
+
+    _classCallCheck(this, Formularioenvio);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Formularioenvio).call(this));
+    _this.state = {
+      codigo_postal: '',
+      municipio: '',
+      estado: '',
+      colonias: [],
+      colonia: '',
+      error: false,
+      errorCP: false,
+      errorColonia: false,
+      distancia: '',
+      monto: ''
+    };
+    _this.integral = _this.integral.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(Formularioenvio, [{
+    key: "integral",
+    value: function integral(km, montoCompra) {
+      var incog;
+      var aux;
+      var dividendo;
+      var dividendo = Math.pow(20.5, 2) / 2;
+      var divisor = km / montoCompra;
+      aux = dividendo * divisor;
+
+      if (isNaN(aux)) {
+        incog = 0;
+      } else {
+        incog = aux;
+        console.log(aux);
+      }
+
+      console.log(incog);
+      return Math.ceil(incog * 100);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }, this.state.error ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, " no podemos llevar a esa \xE1rea ") : '', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: function onSubmit(e) {
+          e.preventDefault();
+
+          _this2.setState({
+            error: false,
+            errorColonia: false,
+            errorCP: false
+          });
+
+          if (_this2.state.codigo_postal === '') {
+            _this2.setState({
+              errorCP: true
+            });
+          } else if (_this2.state.colonia === '' || _this2.state.colonia === 'Colonia') {
+            _this2.setState({
+              errorColonia: true
+            });
+          }
+
+          switch (_this2.state.municipio.trim()) {
+            case 'Tonalá':
+            case 'Guadalajara':
+            case 'Tlajomulco de Zuñiga':
+            case 'San Pedro Tlaquepaque':
+            case 'Tlaquepaque':
+            case 'Zapopan':
+              _this2.setState({
+                error: false
+              });
+
+              break;
+
+            case '':
+              _this2.setState({
+                error: false
+              });
+
+              break;
+
+            default:
+              _this2.setState({
+                error: true
+              });
+
+              break;
+          } // console.log(this.state.municipio);
+
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        className: "form-control",
+        placeholder: "descripcion"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "number",
+        placeholder: "kilometros",
+        className: "form-control",
+        onChange: function onChange(e) {
+          _this2.setState(_objectSpread({}, _this2.state, {
+            distancia: e.target.value
+          }));
+        }
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "number",
+        placeholder: "monto a comprar",
+        className: "form-control",
+        onChange: function onChange(e) {
+          _this2.setState(_objectSpread({}, _this2.state, {
+            monto: e.target.value
+          }));
+        }
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group"
+      }, this.state.errorCP ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, " no ingres\xF3 C\xF3digo Postal V\xE1lido ") : '', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "number",
+        className: "form-control",
+        placeholder: "CP",
+        onChange: function onChange(e) {
+          fetch("https://api-codigos-postales.herokuapp.com/v2/codigo_postal/".concat(e.target.value)).then(function (response) {
+            return response.json();
+          }).then(function (domicilio) {
+            _this2.setState(_objectSpread({}, _this2.state, {
+              codigo_postal: domicilio.codigo_postal,
+              municipio: domicilio.municipio,
+              estado: domicilio.estado,
+              colonias: domicilio.colonias
+            }));
+          });
+        }
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "form-control",
+        value: this.state.estado,
+        key: this.state.estado
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "form-control",
+        value: this.state.municipio,
+        key: this.state.municipiol
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "form-control",
+        value: this.integral(this.state.distancia, this.state.monto),
+        key: this.state.municipiol
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "form-group"
+      }, this.state.errorColonia ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, " Elija colonia ") : '', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+        value: this.state.colonia,
+        onChange: function onChange(e) {
+          _this2.setState(_objectSpread({}, _this2.state, {
+            colonia: e.target.value
+          }));
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "Colonia"
+      }, "Colonia"), this.state.colonias.map(function (row) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          value: row,
+          key: row
+        }, row);
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "submit",
+        className: "btn btn-primary"
+      }, "Submit")))));
+    }
+  }]);
+
+  return Formularioenvio;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Formularioenvio);
+
+/***/ }),
+
+/***/ "./resources/js/components/galeriaprincipal.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/galeriaprincipal.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Galeriaprincipal; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _images_slider4_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../images/slider4.jpg */ "./images/slider4.jpg");
+/* harmony import */ var _images_slider4_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_images_slider4_jpg__WEBPACK_IMPORTED_MODULE_2__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -70510,193 +71096,516 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-var Header =
+var Galeriaprincipal =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(Header, _Component);
+  _inherits(Galeriaprincipal, _Component);
 
-  function Header() {
-    _classCallCheck(this, Header);
+  function Galeriaprincipal() {
+    _classCallCheck(this, Galeriaprincipal);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Header).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(Galeriaprincipal).apply(this, arguments));
   }
 
-  _createClass(Header, [{
+  _createClass(Galeriaprincipal, [{
     key: "render",
     value: function render() {
-      var head = {
-        backgroundColor: "#0c0b0bc9"
+      var style = {
+        fontSize: "15px"
       };
-      var logoStyle = {
-        marginTop: " 60px"
+      var up = {
+        position: "fixed",
+        zIndex: "2147483647",
+        display: "block"
       };
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
-        id: "header"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "header_top",
-        style: head
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        id: "slider"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-sm-25"
+        className: "col-sm-12"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "contactinfo"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "nav nav-pills"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fa fa-phone"
-      }), " 36-19-36-63")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fa fa-envelope"
-      }), " elhierro@live.com.mx"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "mainmenu pull-right"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "nav navbar-nav collapse navbar-collapse"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "index.html",
+        id: "slider-carousel",
+        className: "carousel slide",
+        "data-ride": "carousel"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
+        className: "carousel-indicators"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        "data-target": "#slider-carousel",
+        "data-slide-to": "0",
         className: "active"
-      }, "INICIO")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "dropdown"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "PRODUCTOS", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fa fa-angle-down"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        role: "menu",
-        className: "sub-menu"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "product-details.html"
-      }, "LISTADO")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "checkout.html"
-      }, "SERVICIOS")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "dropdown"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "contact-us.html"
-      }, "CONTACTO", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fa fa-angle-down"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        role: "menu",
-        className: "sub-menu"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "blog.html"
-      }, "V\xC9NDENOS")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "blog-single.html"
-      }, "COTIZA")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "contact-us.html"
-      }, "NOSOTROS")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-sm-8"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        "data-target": "#slider-carousel",
+        "data-slide-to": "1"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        "data-target": "#slider-carousel",
+        "data-slide-to": "2"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        "data-target": "#slider-carousel",
+        "data-slide-to": "3"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        "data-target": "#slider-carousel",
+        "data-slide-to": "4"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        "data-target": "#slider-carousel",
+        "data-slide-to": "5"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "carousel-inner"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "social-icons pull-left"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "nav navbar-nav"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "https://api.whatsapp.com/send?phone=523329269433&text=hola,%20buenos%20dias%20",
-        target: "-blank"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        id: "wats",
-        className: "fab fa-whatsapp"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "https://es-la.facebook.com/pg/Aceros8dejulio/posts/",
-        target: "-blank"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        id: "face",
-        className: "fab fa-facebook"
-      })))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container"
+        className: "item active"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-4 clearfix"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "logo pull-left ",
-        style: logoStyle
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "index.html"
+        className: "col-sm-6"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "P"), "-LASMA CUT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "BARRENOS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "TODO TIPO DE BARRENOS "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "btn btn-default get2"
+      }, "COTIZA AHORA!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-6"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: _images_img_logo_opt_png__WEBPACK_IMPORTED_MODULE_1___default.a,
+        src: _images_slider4_jpg__WEBPACK_IMPORTED_MODULE_2___default.a,
+        className: "girl img-responsive",
         alt: ""
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "btn-group pull-right clearfix"
+        className: "item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "btn-group"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "dropdown-menu"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: ""
-      }, "Canada")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: ""
-      }, "UK")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "btn-group"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "dropdown-menu"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: ""
-      }, "Canadian Dollar")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: ""
-      }, "Pound")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-8 clearfix "
+        className: "col-sm-6"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "P"), "-LASMA CUT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "GRABADOS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "TODO TIPO DE GRABADOS "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "btn btn-default get2"
+      }, "COTIZA AHORA!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-6"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: __webpack_require__(/*! ../../../images/slider10.jpg */ "./images/slider10.jpg"),
+        className: "girl img-responsive",
+        alt: ""
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "shop-menu clearfix pull-right item active "
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " Rapidez"), " Es Nuestro Compromiso"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "nav navbar-nav"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/pie"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fa fa-user"
-      }), " Cuenta")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/cabeza"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fa fa-star"
-      }), " Wishlist")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "checkout.html"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fa fa-crosshairs"
-      }), " Checkout")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "cart.html"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fa fa-shopping-cart"
-      }), " Carrito")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "login.html"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fa fa-lock"
-      }), " Login"))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "header-bottom"
+        className: "col-sm-6"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "P"), "-LASMA CUT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "LETREROS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "TODO TIPO DE DECORACI\xD3N EXTERIOR PARA TU HOGAR "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "btn btn-default get2"
+      }, "COTIZA AHORA!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-6"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: __webpack_require__(/*! ../../../images/slider9.jpg */ "./images/slider9.jpg"),
+        className: "girl img-responsive",
+        alt: ""
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-6"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "P"), "-LASMA CUT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "LETREROS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "TODO TIPO DE DECORACI\xD3N EXTERIOR PARA TU HOGAR "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "btn btn-default get2"
+      }, "COTIZA AHORA!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-6"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: __webpack_require__(/*! ../../../images/slider6.jpg */ "./images/slider6.jpg"),
+        className: "girl img-responsive",
+        alt: ""
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-6"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "P"), "-LASMA CUT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "LETREROS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "TODO TIPO DE DECORACI\xD3N EXTERIOR PARA TU HOGAR "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "btn btn-default get2"
+      }, "COTIZA AHORA!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-6"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: __webpack_require__(/*! ../../../images/slider4.jpg */ "./images/slider4.jpg"),
+        className: "girl img-responsive",
+        alt: ""
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#slider-carousel",
+        className: "left control-carousel hidden-xs",
+        "data-slide": "prev"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fa fa-angle-left"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#slider-carousel",
+        className: "right control-carousel hidden-xs",
+        "data-slide": "next"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fa fa-angle-right"
+      }))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-sm-9"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "navbar-header"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "button",
-        className: "navbar-toggle",
-        "data-toggle": "collapse",
-        "data-target": ".navbar-collapse"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "sr-only"
-      }, "Toggle navigation"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "icon-bar"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "icon-bar"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "icon-bar"
-      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-sm-3"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "search_box pull-right"
-      })))))));
+        className: "left-sidebar"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Categor\xEDas"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "panel-group category-products",
+        id: "accordian"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "panel panel-default"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "panel-heading"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+        className: "panel-title"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        "data-toggle": "collapse",
+        "data-parent": "#accordian",
+        href: "#sportswear"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "badge pull-right"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fa fa-plus"
+      })), "\xC1NGULO"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "sportswear",
+        className: "panel-collapse collapse"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "panel-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, "1\" X 1/8")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, "1\" X 3/16 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, "1\" X 1/4")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, "1 1/4\" X 1/8 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, "1 1/4\" X 3/16 ")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "panel panel-default"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "panel-heading"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+        className: "panel-title"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        "data-toggle": "collapse",
+        "data-parent": "#accordian",
+        href: "#mens"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "badge pull-right"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fa fa-plus"
+      })), "SOLERA"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "mens",
+        className: "panel-collapse collapse"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "panel-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, "1\" X 1/8")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, "1\" X 3/16 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, "1\" X 1/4")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, "1 1/4\" X 1/8 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, "1 1/4\" X 3/16 ")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "panel panel-default"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "panel-heading"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+        className: "panel-title"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        "data-toggle": "collapse",
+        "data-parent": "#accordian",
+        href: "#womens"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "badge pull-right"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fa fa-plus"
+      })), "PTR"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "womens",
+        className: "panel-collapse collapse"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "panel-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, "1\" X 1/8")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, "1\" X 3/16 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, "1\" X 1/4")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, "1 1/4\" X 1/8 ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, "1 1/4\" X 3/16 "))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "brands_products"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Existencias"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "brands-name"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "nav nav-pills nav-stacked"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "pull-right"
+      }, "(50)"), "\xC1NGULO")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "pull-right"
+      }, "(56)"), "SOLERA")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "pull-right"
+      }, "(27)"), "PTR"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "price-range"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "RANGO PARA ENV\xCDO GRATIS DENTRO DE LA ZMG"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "well text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        className: "span2",
+        value: "",
+        "data-slider-min": "1500",
+        "data-slider-max": "2500",
+        "data-slider-step": "5",
+        "data-slider-value": "[1500,2500]",
+        id: "sl2"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
+        className: "pull-left"
+      }, "$ 1500"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
+        className: "pull-right"
+      }, "$ 2500"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "shipping text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: __webpack_require__(/*! ../../../images/download.jpg */ "./images/download.jpg"),
+        alt: ""
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-9 padding-right"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "features_items"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        className: "title text-center"
+      }, "NUESTROS PRODUCTOS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-image-wrapper"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "single-products"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "productinfo text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: __webpack_require__(/*! ../../../images/img/angulo.jpg */ "./images/img/angulo.jpg"),
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "\xC1NGULO")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-overlay"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "overlay-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Desde 3/4\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Hasta"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "6\" Pulgadas"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Desde 30 cm de largo ")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-image-wrapper"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "single-products"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "productinfo text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: __webpack_require__(/*! ../../../images/img/canal.jpg */ "./images/img/canal.jpg"),
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "CANAL")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-overlay"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "overlay-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Desde 3\" Pulgadas"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Hasta"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "12\" Pulgadas"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Desde 30 cm de largo ")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-image-wrapper"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "single-products"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "productinfo text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: __webpack_require__(/*! ../../../images/img/placa.jpg */ "./images/img/placa.jpg"),
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "PLACA")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-overlay"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "overlay-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Desde 3/16 "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Hasta"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "3 pulgadas de espesor"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "A la medida que usted requiera")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-image-wrapper"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "single-products"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "productinfo text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: __webpack_require__(/*! ../../../images/img/cold.jpg */ "./images/img/cold.jpg"),
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "COLD ROLL")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-overlay"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "overlay-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "desde 1/2 "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "hasta"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "1 1/2\" pulgadas de espesor")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-image-wrapper"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "single-products"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "productinfo text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: __webpack_require__(/*! ../../../images/img/lamina.jpg */ "./images/img/lamina.jpg"),
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "L\xC1MINAS")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-overlay"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "overlay-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Desde Calibre 10"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Hasta"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Calibre 20"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Desde 30 cm en ancho de 3' Y 4' pies ")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-image-wrapper"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "single-products"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "productinfo text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: __webpack_require__(/*! ../../../images/img/ant.jpg */ "./images/img/ant.jpg"),
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "ANTIDERRAPANTES")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-overlay"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "overlay-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Desde Cal 10"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Hasta"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Cal 14"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "3' y 4' Pies ")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-image-wrapper"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "single-products"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "productinfo text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: __webpack_require__(/*! ../../../images/img/cua.jpg */ "./images/img/cua.jpg"),
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "CUADRADO")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-overlay"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "overlay-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Desde 3/8"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Hasta"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "1\" Pulgada"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Desde 30 cm de largo ")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-image-wrapper"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "single-products"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "productinfo text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: __webpack_require__(/*! ../../../images/img/polin.jpg */ "./images/img/polin.jpg"),
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "POL\xCDN MONT\xC9N")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-overlay"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "overlay-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Desde 3\" Pulgadas"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Hasta"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "6\" Pulgadas")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-image-wrapper"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "single-products"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "productinfo text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: __webpack_require__(/*! ../../../images/img/ptr.jpg */ "./images/img/ptr.jpg"),
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "PTR")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-overlay"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "overlay-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Desde 1\" Pulgada"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Hasta"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "6\" Pulgadas")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-image-wrapper"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "single-products"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "productinfo text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: __webpack_require__(/*! ../../../images/img/redondo.jpg */ "./images/img/redondo.jpg"),
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "REDONDOS")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-overlay"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "overlay-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Desde 1/4\" "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Hasta"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "1\" Pulgada")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-image-wrapper"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "single-products"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "productinfo text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: __webpack_require__(/*! ../../../images/img/solera.jpg */ "./images/img/solera.jpg"),
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "SOLERA")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-overlay"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "overlay-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Desde 1/2\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Hasta"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "10\" Pulgadas"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Espesores de 1/8 hasta 1\" ")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-image-wrapper"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "single-products"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "productinfo text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: __webpack_require__(/*! ../../../images/img/tubo.jpg */ "./images/img/tubo.jpg"),
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "TUBO")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-overlay"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "overlay-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Desde 1/2\" "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Hasta"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "12\" Pulgadas")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-image-wrapper"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "single-products"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "productinfo text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: __webpack_require__(/*! ../../../images/img/tubu.jpg */ "./images/img/tubu.jpg"),
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "TUBULAR")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-overlay"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "overlay-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Desde 3/4\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Hasta"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "2\" Pulgadas")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-image-wrapper"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "single-products"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "productinfo text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: __webpack_require__(/*! ../../../images/img/vari.jpg */ "./images/img/vari.jpg"),
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "VARILLA CORRUGADA")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-overlay"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "overlay-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Desde 3/8\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Hasta"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "3/4\" ")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-image-wrapper"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "single-products"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "productinfo text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: __webpack_require__(/*! ../../../images/img/viga.jpg */ "./images/img/viga.jpg"),
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "VIGA")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "product-overlay"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "overlay-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Desde 4\" Pulgadas"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Hasta"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "12\" Pulgadas"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Desde 30 cm de largo "))))))))))));
     }
   }]);
 
-  return Header;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+  return Galeriaprincipal;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]); //ReactDOM.render(<Galeriaprincipal />, document.getElementById('galery'));
+
 
 
 
@@ -70720,8 +71629,8 @@ function (_Component) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\laragon\www\proyecto-ecomerce\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\laragon\www\proyecto-ecomerce\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\laragon\www\proyecto-laravel\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\proyecto-laravel\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
