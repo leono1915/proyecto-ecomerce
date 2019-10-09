@@ -70,6 +70,7 @@ export default class Header extends Component {
 
 		<div className="container">
 			<div className="row">
+				
 				<div className="col-md-4 clearfix">
 					<div className="logo pull-left " style={logoStyle}>
 						<a href="index.html"><img src={logo} alt="" /></a>
@@ -96,7 +97,7 @@ export default class Header extends Component {
 					<div className="shop-menu clearfix pull-right item active ">
 						<h1><span> Rapidez</span> Es Nuestro Compromiso</h1>
 						<ul className="nav navbar-nav">
-							<li><Link to="/pie"><i className="fa fa-user"></i> Cuenta</Link></li>
+							<li><Link to="/datosenvio"><i className="fa fa-user"></i> Cuenta</Link></li>
 							<li><Link to="/cabeza"><i className="fa fa-star"></i> Wishlist</Link></li>
 							<li><a href="checkout.html"><i className="fa fa-crosshairs"></i> Checkout</a></li>
 							<li><a href="cart.html"><i className="fa fa-shopping-cart"></i> Carrito</a></li>
