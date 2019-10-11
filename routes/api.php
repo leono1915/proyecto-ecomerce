@@ -15,12 +15,17 @@ use Illuminate\Http\Request;
 
 /*Route::post('tasks', 'TaskController@store');
 Route::put('tasks/{task}', 'TaskController@markAsCompleted');*/
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+/*Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
-});
+});*/
 
-Route::get('producto_venta', 'Producto_controller@index');
-Route::get('productos', 'ProductoController@index');
-Route::get('productos/sub', 'ProductoController@sublista');
-Route::get('productos/{id}', 'Producto_controller@show');
-Route::put('productos/{id}', 'Producto_controller@markAsCompleted');
+
+//retorna todos los productos cotizados con sus peso 
+Route::post('productosCotizados', 'ProductoController@productosCotizados');
+// retorna nombre medida y espesor para cotizar
+Route::get('productosCotizador','ProductoController@productosCotizador');
+//me regresa todos los productos agrupados junto con su cuenta es para la galeria inicial
+Route::get('productosInicio', 'ProductoController@productosPaginaInicio');
+
+/*Route::get('productos/{id}', 'Producto_controller@show');
+Route::put('productos/{id}', 'Producto_controller@markAsCompleted');*/

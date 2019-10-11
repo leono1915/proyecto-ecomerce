@@ -28,7 +28,16 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
     public function ventas(){
-        return $this->hasMaany(Venta::class);
+        return $this->hasMany(Venta::class);
+    }
+    public function cotizaciones(){
+        return $this->hasMany(Productoventa::class);
+    }
+    public function direccionEntrega(){
+        return $this->hasMany(Direccionentrega::class);
+    }
+    public function direccionFacturacion(){
+        return $this->hasMany(Facturacion::class);
     }
     /**
      * The attributes that should be cast to native types.

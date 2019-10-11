@@ -46,15 +46,15 @@ class Formularioenvio extends Component {
 
     return (
       
-      <Fragment>
+      <div>
 
           
-        <div className="container jumbotron" >
+      
        { this.state.error? <p> no podemos llevar a esa área </p> : '' }
 
-       <div className="row">
+    
       
-       <div className="col-sm-6 col-sm-offset-3">
+       <div className="col-sm-6 jumbotron">
             <div className="form-group ">
           
          <form  onSubmit={e=>{
@@ -187,9 +187,9 @@ class Formularioenvio extends Component {
          </form>
         </div>
         </div>
-        </div>
-        </div>
-        </Fragment> 
+      
+        
+        </div> 
     );
     }
 }

@@ -10,27 +10,26 @@ import Header from './Header';
 export default class Example extends Component {
     render() {
         return (
-            <Router>
+           
                
-            <Fragment>
-
+            <div>
+            <Route  exact path="/" component={Galeriaprincipal } /   >  
             
-<div>
-            <Switch>
+
+           
             <Route  exact path="/home" component={Home } /   >  
              
                  
-                  <Route  exact path="/carrito" component={Footer } /   >  
-                  <Route  exact path="/" component={Galeriaprincipal } /   >  
+            <Route  exact path="/carrito" component={Footer } /   >  
+                 
            
 
-             </Switch>
-             </div>
-            
-          
-            </Fragment>
            
-            </Router>
+           
+          
+            </div>
+           
+        
         );
     }
 }

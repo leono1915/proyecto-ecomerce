@@ -17,8 +17,11 @@ class CreateProductoVentaTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('id_user')->unsigned();
             $table->foreign('id_user')->references('id')->on('users');
+            $table->bigInteger('id_producto')->unsigned();
+            $table->foreign('id_producto')->references('id')->on('productos');
             $table->text('descripcion');
             $table->decimal('subtotal',10,2);
+            $table->decimal('cantidad',10,2);
             $table->decimal('iva',10,2);
             $table->decimal('total',10,2);
             $table->timestamps();

@@ -10,25 +10,28 @@ class ProductoController extends Controller
     //
     public function __construct()
     {
-      $this->middleware('auth');
+     // $this->middleware('auth');
     }
-
-    public function index()
+    
+    public function productosCotizador()
     {
-      $projects = Producto::where('nombre','!=', 'concepto')
+      $projects = Producto::select('nombre','medida','espesor')->where('nombre','!=', 'concepto')
                           ->get();
 
       return $projects->toJson();
     }
-    public function sublista(){
+    public function productosCotizados(Request $request)
+    {
+      //
+      $projects = Producto::where('nombre','=', $request->input('nombre'))->where('medida','=',$request->input('medida'))
+      ->where('espesor','=',$request->input('espesor'))
+                          ->get();
+
+      return $projects->toJson();
+    }
+    public function productosPaginaInicio(){
       $projects = Producto::select('nombre',DB::raw('SUM(cantidad) as total'))->where('nombre','!=','concepto')->where('nombre','!=','puli')->
        havingRaw('SUM(cantidad) > ?',[50])->groupBy('nombre')->get();
-     /* select('nombre', DB::raw('SUM(cantidad) as total_sales'))
-      ->groupBy('nombre')
-      ->havingRaw('SUM(cantidad) > ?', [50])
-      ->get();*/
-      //
-
       return $projects->toJson();
     }
 }
