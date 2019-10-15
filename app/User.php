@@ -5,8 +5,9 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-
-class User extends Authenticatable
+use App\Venta,Productoventa,Direccionentrega,Facturacion;
+use Tymon\JWTAuth\Contracts\JWTSubject;
+class User extends Authenticatable implements JWTSubject
 {
     use Notifiable;
 
@@ -15,6 +16,12 @@ class User extends Authenticatable
      *
      * @var array
      */
+    public function getJWTIdentifier(){
+        return $this->getKey();
+    }
+    public function getJWTCustomClaims(){
+        return [];
+    }
     protected $fillable = [
         'name', 'email', 'password',
     ];
@@ -28,7 +35,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
     public function ventas(){
-        return $this->hasMany(Venta::class);
+        return $this->hasMany(Venta::class,'id_user');
     }
     public function cotizaciones(){
         return $this->hasMany(Productoventa::class);

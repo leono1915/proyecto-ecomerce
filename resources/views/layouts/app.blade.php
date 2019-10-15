@@ -238,7 +238,7 @@
 	
 	</div>
 	<div id="example"></div>
-	<div id="footer"><div>
+	
 </body>
 </html>
 

@@ -1,6 +1,9 @@
 import React, { Fragment,Component } from 'react'
 import logo from '../../../images/img/logo_opt.png';
+import Galeriaprincipal from './galeriaprincipal';
 
+import Landing from './navbar';
+import Usuarios from './Usuario';
 import { BrowserRouter as Router, Route, Link ,Switch} from 'react-router-dom';
 export default class Header extends Component {
     render(){
@@ -29,7 +32,7 @@ export default class Header extends Component {
 					</div>
 					<div className="mainmenu pull-right">
 						<ul className="nav navbar-nav collapse navbar-collapse">
-							<li><a href="index.html" className="active">INICIO</a></li>
+							<li><a href="/" className="active">INICIO</a></li>
 							<li className="dropdown"><a href="#">PRODUCTOS<i className="fa fa-angle-down"></i></a>
 								<ul role="menu" className="sub-menu">
 								{/*	<!--  <li><a href="shop.html">Products</a></li>--> */}
@@ -73,7 +76,7 @@ export default class Header extends Component {
 				
 				<div className="col-md-4 clearfix">
 					<div className="logo pull-left " style={logoStyle}>
-						<a href="index.html"><img src={logo} alt="" /></a>
+						<a href="/"><img src={logo} alt="Aceros" /></a>
 					</div>
 					<div className="btn-group pull-right clearfix">
 						<div className="btn-group">
@@ -93,18 +96,7 @@ export default class Header extends Component {
 						</div>
 					</div>
 				</div>
-				<div className="col-md-8 clearfix ">
-					<div className="shop-menu clearfix pull-right item active ">
-						<h1><span> Rapidez</span> Es Nuestro Compromiso</h1>
-						<ul className="nav navbar-nav">
-							<li><Link to="/datosenvio"><i className="fa fa-user"></i> Cuenta</Link></li>
-							<li><Link to="/cabeza"><i className="fa fa-star"></i> Wishlist</Link></li>
-							<li><a href="checkout.html"><i className="fa fa-crosshairs"></i> Checkout</a></li>
-							<li><a href="cart.html"><i className="fa fa-shopping-cart"></i> Carrito</a></li>
-							<li><a href="login.html"><i className="fa fa-lock"></i> Login</a></li>
-						</ul>
-					</div>
-				</div>
+				<Landing/>
 			</div>
 		</div>
 		
@@ -136,7 +128,16 @@ export default class Header extends Component {
 		</div>
 		
 	</header>
-
+     
+       
+		<Switch>
+		<Route exact path ="/Home" component ={Usuarios}/>
+	    <Route  exact path="/" component={Galeriaprincipal}/>
+		<Route exact path="/home/register" component={Usuarios} />
+            <Route exact path="/home/login" component={Usuarios} />
+            <Route exact path="/home/profile" component={Usuarios} />
+        </Switch>
+		
            </Fragment>
         );
     }

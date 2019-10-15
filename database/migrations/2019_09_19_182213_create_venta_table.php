@@ -13,7 +13,7 @@ class CreateVentaTable extends Migration
      */
     public function up()
     {
-        Schema::create('venta', function (Blueprint $table) {
+        Schema::create('ventas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('id_user')->unsigned();
             $table->bigInteger('id_productos')->unsigned();
@@ -38,6 +38,6 @@ class CreateVentaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('venta');
+        Schema::dropIfExists('ventas');
     }
 }

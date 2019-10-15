@@ -7,24 +7,20 @@ import Home from './Home';
 import { BrowserRouter as Router, Route, Redirect,Link ,Switch} from 'react-router-dom';
 import Header from './Header';
 
-export default class Example extends Component {
+export default class Index extends Component {
     render() {
         return (
            
                
             <div>
-            <Route  exact path="/" component={Galeriaprincipal } /   >  
-            
-
-           
-            <Route  exact path="/home" component={Home } /   >  
+          <Header/>
              
                  
-            <Route  exact path="/carrito" component={Footer } /   >  
+           
                  
            
 
-           
+           <Footer/>
            
           
             </div>
@@ -34,8 +30,8 @@ export default class Example extends Component {
     }
 }
 
-if (document.getElementById('example')) {
-    ReactDOM.render(<Router><Example /></Router>, document.getElementById('example'));
+if (document.getElementById('index')) {
+    ReactDOM.render(<Router><Index/></Router>, document.getElementById('index'));
    
 }
 

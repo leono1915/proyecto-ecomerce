@@ -51,7 +51,7 @@ import Formularioenvio from './formularioenvio';
                  MI PERFIL</Link>
              <Link to="" class="list-group-item list-group-item-action" id="list-messages-list"   role="tab" aria-controls="messages">
                 DATOS DE ENVÍO Y FATURACIÓN</Link>
-             <Link to="/home/datosenvio" class="list-group-item list-group-item-action " id="list-messages-list"   role="tab" aria-controls="messages">
+             <Link to="/datosenvio" class="list-group-item list-group-item-action " id="list-messages-list"   role="tab" aria-controls="messages">
               
                   MIS PEDIDOS</Link>
               <Link to="" class="list-group-item list-group-item-action" id="list-settings-list"   role="tab" aria-controls="settings">
@@ -67,7 +67,7 @@ import Formularioenvio from './formularioenvio';
     
       <Switch>
          
-          <Route   path="/home/datosenvio" component={Formularioenvio } /   > 
+          <Route   path="/datosenvio" component={Formularioenvio } /   > 
           
      
       </Switch>
