@@ -15,10 +15,13 @@ export default class Footer extends Component {
             zIndex: "2147483647",
              display: "block"
         }
+        const mt={
+            marginTop:'80px',
+        }
         return(
 
            <Fragment>
-                <footer id="footer">
+                <footer id="footer" style={mt}>
             
                 <div className="footer-top">
 			<div className="container">

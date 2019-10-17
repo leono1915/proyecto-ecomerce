@@ -134,7 +134,7 @@ class Formularioenvio extends Component {
          { this.state.errorCP? <p> no ingresó Código Postal Válido </p> : '' }
              <input type="number" className="form-control" placeholder="CP" 
              onChange={e=>{
-               
+                  if(e.target.value.length==5){
                   fetch(`https://api-codigos-postales.herokuapp.com/v2/codigo_postal/${e.target.value}`).
                   then((response)=>{
                       return response.json();
@@ -151,6 +151,7 @@ class Formularioenvio extends Component {
                         colonias:domicilio.colonias
                        })
                   })
+                }
              }}
             />
              

@@ -9,7 +9,8 @@ class Register extends Component {
             last_name: '',
             email: '',
             password: '',
-            errors: {}
+            errors:false,
+            emailValid:false
         }
 
         this.onChange = this.onChange.bind(this)
@@ -17,11 +18,18 @@ class Register extends Component {
     }
 
     onChange (e) {
+    
         this.setState({ [e.target.name]: e.target.value })
     }
     onSubmit (e) {
+        var valor=this.state.email;
         e.preventDefault()
-
+        if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(valor)){
+          
+           } else {
+           this.setState({emailValid:true});
+            return;
+           }
         const newUser = {
             name: this.state.first_name + ' ' + this.state.last_name,
             email: this.state.email,
@@ -29,7 +37,13 @@ class Register extends Component {
         }
 
         register(newUser).then(res => {
+            if(res){
             this.props.history.push(`/home`)
+            }
+            else{
+                console.log(res)
+                this.setState({errors:true})
+            }
         })
     }
 
@@ -38,42 +52,44 @@ class Register extends Component {
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 mt-5 mx-auto">
+                        {this.state.errors?<p>El correo ya está registrado</p>:""}
                         <form noValidate onSubmit={this.onSubmit}>
                             <h1 className="h3 mb-3 font-weight-normal">
-                                Register
+                                Registro
                             </h1>
                             <div className="form-group">
-                                <label htmlFor="name">First name</label>
+                                <label htmlFor="name">Nombre</label>
                                 <input
                                     type="text"
                                     className="form-control"
                                     name="first_name"
-                                    placeholder="Enter your first name"
+                                    placeholder="Ingrese su nombre"
                                     value={this.state.first_name}
                                     onChange={this.onChange}
                                 />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="name">Last name</label>
+                                <label htmlFor="name">Apellidos</label>
                                 <input
                                     type="text"
                                     className="form-control"
                                     name="last_name"
-                                    placeholder="Enter your lastname name"
+                                    placeholder="Ingrese su apellido"
                                     value={this.state.last_name}
                                     onChange={this.onChange}
                                 />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="email">Email address</label>
+                                <label htmlFor="email">Email</label>
                                 <input
                                     type="email"
                                     className="form-control"
                                     name="email"
-                                    placeholder="Enter email"
+                                    placeholder="email"
                                     value={this.state.email}
                                     onChange={this.onChange}
                                 />
+                                 {this.state.emailValid?<p>El correo no es válido</p>:""}
                             </div>
                             <div className="form-group">
                                 <label htmlFor="password">Password</label>
@@ -90,7 +106,7 @@ class Register extends Component {
                                 type="submit"
                                 className="btn btn-lg btn-primary btn-block"
                             >
-                                Register!
+                                Registrarme!
                             </button>
                         </form>
                     </div>

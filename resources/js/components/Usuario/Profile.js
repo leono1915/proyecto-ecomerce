@@ -22,12 +22,13 @@ class Profile extends Component {
 
     render() {
         return (
+          
             localStorage.usertoken ? 
-            <div className="container">
-                <div className="jumbotron mt-5">
-                    <div className="col-sm-4 mx-auto">
+            <div className="col-sm-6 jumbotron">
+                <div className="form-group">
+                   
                         <h1 className="text-center">PROFILE</h1>
-                    </div>
+                    
                     <table className="table col-md-4 mx-auto">
                         <tbody>
                             <tr>
@@ -40,9 +41,10 @@ class Profile extends Component {
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                    </div>
             </div>:
             <Redirect to="/"/>
+       
         )
     }
 }

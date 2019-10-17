@@ -15,7 +15,7 @@ class ProductoController extends Controller
     
     public function productosCotizador()
     {
-      $projects = Producto::select('nombre','medida','espesor')->where('nombre','!=', 'concepto')
+      $projects = Producto::where('nombre','!=', 'concepto')
                           ->get();
 
       return $projects->toJson();

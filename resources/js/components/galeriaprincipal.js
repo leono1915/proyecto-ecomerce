@@ -1,7 +1,6 @@
 
 
 import React, { Component,Fragment } from 'react'
-import ReactDOM from 'react-dom';
 import logo from '../../../images/slider4.jpg';
 
 export default class Galeriaprincipal  extends Component {

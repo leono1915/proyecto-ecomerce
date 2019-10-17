@@ -2,6 +2,7 @@
 import React, { Component,Fragment } from 'react';
 import { BrowserRouter as Router, Route, Redirect,Link ,Switch} from 'react-router-dom';
 import Formularioenvio from './formularioenvio';
+import Profile from './Profile'
 
  export default class Home extends Component{
     constructor(){
@@ -47,11 +48,11 @@ import Formularioenvio from './formularioenvio';
                        
              </Link>
             
-             <Link to="" class="list-group-item list-group-item-action" id="list-profile-list"   role="tab" aria-controls="profile">
+             <Link to="/home/perfil" class="list-group-item list-group-item-action" id="list-profile-list"   role="tab" aria-controls="profile">
                  MI PERFIL</Link>
              <Link to="" class="list-group-item list-group-item-action" id="list-messages-list"   role="tab" aria-controls="messages">
                 DATOS DE ENVÍO Y FATURACIÓN</Link>
-             <Link to="/datosenvio" class="list-group-item list-group-item-action " id="list-messages-list"   role="tab" aria-controls="messages">
+             <Link to="/home/datosenvio" class="list-group-item list-group-item-action " id="list-messages-list"   role="tab" aria-controls="messages">
               
                   MIS PEDIDOS</Link>
               <Link to="" class="list-group-item list-group-item-action" id="list-settings-list"   role="tab" aria-controls="settings">
@@ -65,12 +66,13 @@ import Formularioenvio from './formularioenvio';
        </div>
       </div>
     
-      <Switch>
+    
          
-          <Route   path="/datosenvio" component={Formularioenvio } /   > 
+          <Route exact  path="/home/datosenvio" component={Formularioenvio } /   >
+          <Route exact  path="/home/perfil" component={Profile } /   >  
           
-     
-      </Switch>
+         
+      
      
        
        </div>

@@ -29,6 +29,7 @@ Route::group(['middleware' => 'jwt.auth'], function () {
     Route::post('logout', 'UserController@logout');
     Route::get('ventas','Venta__controller@index');
     Route::get('usuario', 'UserController@getUser');
+    //Route::get('productosCotizador','ProductoController@productosCotizador');
 });
 //retorna todos los productos cotizados con sus peso 
 Route::post('productosCotizados', 'ProductoController@productosCotizados');

@@ -1,8 +1,9 @@
 import React, { Fragment,Component } from 'react'
 import logo from '../../../images/img/logo_opt.png';
 import Galeriaprincipal from './galeriaprincipal';
-
+import Error404 from './Error404';
 import Landing from './navbar';
+import Cotizador from './Cotizador';
 import Usuarios from './Usuario';
 import { BrowserRouter as Router, Route, Link ,Switch} from 'react-router-dom';
 export default class Header extends Component {
@@ -25,42 +26,43 @@ export default class Header extends Component {
 					<div className="col-sm-25">
 						<div className="contactinfo">
 							<ul className="nav nav-pills">
-								<li><a href="#"><i className="fa fa-phone"></i> 36-19-36-63</a></li>
-								<li><a href="#"><i className="fa fa-envelope"></i> elhierro@live.com.mx</a></li>
+								<li><Link to="#"><i className="fa fa-phone"></i> 36-19-36-63</Link></li>
+								<li><Link to="#"><i className="fa fa-envelope"></i> elhierro@live.com.mx</Link></li>
 							</ul>
 						</div>
 					</div>
 					<div className="mainmenu pull-right">
 						<ul className="nav navbar-nav collapse navbar-collapse">
-							<li><a href="/" className="active">INICIO</a></li>
-							<li className="dropdown"><a href="#">PRODUCTOS<i className="fa fa-angle-down"></i></a>
+							<li><Link to="/" className="active">INICIO</Link></li>
+							<li className="dropdown"><Link to="#">PRODUCTOS<i className="fa fa-angle-down"></i></Link>
 								<ul role="menu" className="sub-menu">
-								{/*	<!--  <li><a href="shop.html">Products</a></li>--> */}
-									<li><a href="product-details.html">LISTADO</a></li>
-									<li><a href="checkout.html">SERVICIOS</a></li>
-									{/*<!--<li><a href="cart.html">CARRITO</a></li>
-									<li><a href="login.html">PEDIDOS</a></li>--> */}
+								{/*	<!--  <li><Link to="shop.html">Products</Link></li>--> */}
+									<li><Link to="/">LISTADO</Link></li>
+									<li><Link to="/">SERVICIOS</Link></li>
+									<li><Link to="/cotizador">COTIZADOR</Link></li>
+									{/*<!--<li><Link to="cart.html">CARRITO</Link></li>
+									<li><Link to="login.html">PEDIDOS</Link></li>--> */}
 								</ul>
 							</li>
-							<li className="dropdown"><a href="contact-us.html">CONTACTO<i className="fa fa-angle-down"></i></a>
+							<li className="dropdown"><Link to="contact-us.html">CONTACTO<i className="fa fa-angle-down"></i></Link>
 								<ul role="menu" className="sub-menu">
-									<li><a href="blog.html">VÉNDENOS</a></li>
-								{/*	<!--<li><a href="blog-single.html">REGISTRATE</a></li>--> */}
-									<li><a href="blog-single.html">COTIZA</a></li>
+									<li><Link to="blog.html">VÉNDENOS</Link></li>
+								{/*	<!--<li><Link to="blog-single.html">REGISTRATE</Link></li>--> */}
+									<li><Link to="blog-single.html">COTIZA</Link></li>
 								</ul>
 							</li>
 
-							<li><a href="contact-us.html">NOSOTROS</a></li>
+							<li><Link to="contact-us.html">NOSOTROS</Link></li>
 						</ul>
 					</div>
 					<div className="col-sm-8">
 						<div className="social-icons pull-left">
 							<ul className="nav navbar-nav">
-								<a href="https://api.whatsapp.com/send?phone=523329269433&text=hola,%20buenos%20dias%20"
+								<Link to="https://api.whatsapp.com/send?phone=523329269433&text=hola,%20buenos%20dias%20"
 									target="-blank">
-									<i id="wats" className="fab fa-whatsapp"></i></a>
-								<a href="https://es-la.facebook.com/pg/Aceros8dejulio/posts/" target="-blank">
-									<i id="face" className="fab fa-facebook"></i></a>
+									<i id="wats" className="fab fa-whatsapp"></i></Link>
+								<Link to="https://es-la.facebook.com/pg/Aceros8dejulio/posts/" target="-blank">
+									<i id="face" className="fab fa-facebook"></i></Link>
 							</ul>
 						</div>
 					</div>
@@ -76,22 +78,22 @@ export default class Header extends Component {
 				
 				<div className="col-md-4 clearfix">
 					<div className="logo pull-left " style={logoStyle}>
-						<a href="/"><img src={logo} alt="Aceros" /></a>
+						<Link to="/"><img src={logo} alt="Aceros" /></Link>
 					</div>
 					<div className="btn-group pull-right clearfix">
 						<div className="btn-group">
 
 							<ul className="dropdown-menu">
-								<li><a href="">Canada</a></li>
-								<li><a href="">UK</a></li>
+								<li><Link to="">Canada</Link></li>
+								<li><Link to="">UK</Link></li>
 							</ul>
 						</div>
 
 						<div className="btn-group">
 
 							<ul className="dropdown-menu">
-								<li><a href="">Canadian Dollar</a></li>
-								<li><a href="">Pound</a></li>
+								<li><Link to="">Canadian Dollar</Link></li>
+								<li><Link to="">Pound</Link></li>
 							</ul>
 						</div>
 					</div>
@@ -132,10 +134,13 @@ export default class Header extends Component {
        
 		<Switch>
 		<Route exact path ="/Home" component ={Usuarios}/>
+		<Route exact path ="/Home/datosenvio" component ={Usuarios}/>
 	    <Route  exact path="/" component={Galeriaprincipal}/>
+		<Route  exact path="/cotizador" component={Cotizador}/>
 		<Route exact path="/home/register" component={Usuarios} />
-            <Route exact path="/home/login" component={Usuarios} />
-            <Route exact path="/home/profile" component={Usuarios} />
+        <Route exact path="/home/login" component={Usuarios} />
+        <Route exact path="/home/perfil" component={Usuarios} />
+		<Route exact path="/*" component={Error404}/>
         </Switch>
 		
            </Fragment>

@@ -28,7 +28,7 @@ class Login extends Component {
         login(user).then(res => {
             console.log(res)
             if (res) {
-                this.props.history.push(`/home/profile`)
+                this.props.history.push(`/home`)
             }else{
                 this.setState({
                     errors:true
