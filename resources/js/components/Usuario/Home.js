@@ -2,8 +2,8 @@
 import React, { Component,Fragment } from 'react';
 import { BrowserRouter as Router, Route, Redirect,Link ,Switch} from 'react-router-dom';
 import Formularioenvio from './formularioenvio';
-import Profile from './Profile'
-
+import Profile from './Profile';
+import { getProfile } from './UserFunctions';
  export default class Home extends Component{
     constructor(){
         super();
@@ -11,11 +11,17 @@ import Profile from './Profile'
             redi:false
         }
     }
+    componentDidMount() {
+        getProfile().then(res => {
+            console.log(res+"consola aplicada")
+            
+        })
+    }
     render(){
         return(
             <div>
                 
-                
+               { localStorage.usertoken ?     
             <div className="container">
     <div className="row">
 
@@ -77,7 +83,7 @@ import Profile from './Profile'
        
        </div>
    </div>
-
+   : <Redirect to="/"/>}
    </div>
 
         )

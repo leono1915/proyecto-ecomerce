@@ -5,55 +5,132 @@ import { Link} from 'react-router-dom';
 import axios from 'axios';
 
 
+
 export default class Cotizador extends Component {
     constructor(){
         super();
         this.state={
-            productos:[
-
-			],
+            productos:[],
 			medidas:[],
 			espesores:[],
+			productosCotizados:[],
+			id:'',
 			nombre:'',
 			medida:'',
 			espesor:'',
             distancia:'',
             envio:'',
             subTotal:'',
-            total:''
+			total:'',
+			errorNoEncontrado:false,
+			metrosBandera:false,
+			piezas:false,
+			metro:0,
+			tramo:1
 		}
+		console.log(JSON.parse(sessionStorage['p']))
 		
 	}
 	componentDidMount(){
 	    axios.get('/api/productosCotizador').then(response=>{
-			console.log(response.data)
-			  this.setState({productos:response.data})   
+			//console.log(response.data)
+			  this.setState({productos:response.data})  
 		})
 	}
-    Suma(){
-        var j=this.state.cantidad+1;
-        this.setState({[e.cantidad.target.name]:i})
-      
-    }
-    Resta(){
+	Calcular(){
+		
+		let nombre=this.state.nombre+this.state.medida+this.state.espesor;
+		let id=this.state.id;
+		this.state.productos.map(e=>{
+			
+			  if(nombre===e.nombre+e.medida+e.espesor){
+				  //console.log(e.nombre+e.medida+e.espesor+"encontrado"+e.peso+e.id+e.precio)
+				  if(id===e.id){
+					alert('ya seleccionó este producto si desea puede incrementar la cantidad desde el check box')
+					return;
+				}
+				  const item={id:e.id,nombre:e.nombre,medida:e.medida,espesor:e.espesor,peso:e.peso,precio:e.precio,
+				  cantidad:1}
+				  this.setState(estate=>{
+					estate.productosCotizados.push(item); 
+					
+				
+				
+					const list=estate.productosCotizados;
+					
+						sessionStorage.setItem('p',JSON.stringify(this.state.productosCotizados));
+				
+				 console.log(JSON.parse(sessionStorage['p']))
+                   //console.log(item+"item",{list}+"list",estate.productosCotizados+"estate.pro")
+					return{
+						list,
+					    id:e.id}
+				  })				
+			  }
+			  else{
+				  this.setState({
+					  errorNoEncontrado:true
+				  })
+				  return;
+			  }
+			  
+		})
+		
+	}
+	eliminarProducto(e){
+		var productos=this.state.productosCotizados;
+			
+			   productos.splice(e,1);
+				this.setState({productosCotizados:productos,
+				id:''})	
+	}
+    Suma(e){
+   this.setState(state=>{
+	  const list= state.productosCotizados[e].cantidad++;
+
+	  return{list,}
+   }
        
-        var j=this.state.cantidad-1;
-        if (j==0) return 
-        this.setState({cantidad:i})
-        
+   )         
+    }
+    Resta(e){
+       if(this.state.productosCotizados[e].cantidad==1) return;
+	   this.setState(state=>{
+		const list= state.productosCotizados[e].cantidad--;
+  
+		return{list,}
+	 }
+	   )
     }
     onChange(e){
 		let array=[];
 		let arrayEspesores=[];
 		var i=0;
 		var j=0;
-		var k=0;
+		let bandera=false;
+		let banderaPiezas=false;
 		let dato=[e.target.name];
-		
+		switch (e.target.value) {
+			case "TUBULAR":
+			case "VARILLA CORRUGADA":
+			case "POLIN MONTEN":
+			case "PULIDO":
+			bandera=true;	   
+				break;
+			case "VIGA IPS":
+			case "VIGA IPR":
+			case "CANAL":
+			case "INSUMO":
+			case "ABRASIVO":
+			banderaPiezas=true;
+		    break;
+			default:
+				break;
+		}
 		switch (dato[0]) {
+		
 			case "nombre":
 				this.setState({ nombre:e.target.value})
-				
 				this.state.productos.map(el=>{
 				  if(el.nombre==e.target.value){
 						array[i]=el.medida;
@@ -63,11 +140,12 @@ export default class Cotizador extends Component {
 				});
 				this.setState({
 					medidas:array,
-					
+					metros:bandera,
+					piezas:banderaPiezas
 				});	
 				break;
 				case "medida":
-						
+						this.setState({ medida:e.target.value})	
 					this.state.productos.map(el=>{
 						if(el.nombre+el.medida==this.state.nombre+e.target.value){
 							  arrayEspesores[j]=el.espesor;
@@ -78,9 +156,13 @@ export default class Cotizador extends Component {
 						  espesores:arrayEspesores
 					  });
 				break;	
-				
+				case "espesor":
+						this.setState({ espesor:e.target.value})
+				break;
 			default:
-			
+			 this.setState({
+				 [e.target.name]:e.target.value
+			 })
 				break;
 		}
 		
@@ -113,14 +195,19 @@ export default class Cotizador extends Component {
 			</div>
 			<div className="heading">
 				<h3 className="align-center">Qué necesitas ?</h3>
-				<p>Haz Tu Cotización y Recíbelo en la Puerta de tu hogar </p>
+				<p>Cotiza! Haz Tu Pedido y Recíbelo en la Puerta de tu Domicilio </p>
+				<p>No pagues fletes costosos! ni pierdas tiempo y dinero buscando <br/> tenemos todo lo que necesitas</p>
 			</div>
 			<div className="row">
 				<div className="col-sm-12">
 					<div className="chose_area">
-						
+					{this.state.metros? <div class="alert alert-primary" role="alert">
+                  producto solo disponible por pieza
+                    </div>:""}
 						<ul className="user_info">
+
 							<li className="single_field">
+							
 								<label>Nombre</label>
 								<select onChange={this.onChange.bind(this)}
 							    
@@ -135,18 +222,13 @@ export default class Cotizador extends Component {
 									  //console.log(noRepeat),
 									  this.noRepeat.map(e=>{
 									         return(
-											<option>{e}</option>
+											<option
+											key={e} value={e}
+											>{e}</option>
 											 )
 											
-									  })
-									  
-
-								  }
-								  
-								
-								
-									
-									
+									  })								 
+				                  }	
 								</select>
 								
 							</li>
@@ -164,7 +246,9 @@ export default class Cotizador extends Component {
 									  //console.log(noRepeat),
 									  this.noRepeat.map(e=>{
 									         return(
-											<option>{e}</option>
+											<option
+											key={e} value={e}
+											>{e}</option>
 											 )
 											
 									  })}
@@ -179,14 +263,16 @@ export default class Cotizador extends Component {
 								<option>Espesor </option>
 								{   this.noRepeat=[... new Set(
 										  this.state.espesores.map(e=>
-											  e
+											      e
 										  )
 									  )],
 									  //console.log(noRepeat),
 									  this.noRepeat.map(e=>{
 									         return(
 										
-											<option>{e}</option>
+											<option
+											key={e} value={e}
+											>{e}</option>
 											 )
 											
 									  })}
@@ -194,9 +280,29 @@ export default class Cotizador extends Component {
 								</select>
 								
 							</li>
+							
+							{!this.state.piezas? <li className="single_field">
+							<br/>
+								<label>Piezas</label>
+							<input  type="number" min="1" placeholder="Piezas" name="tramo"
+							onChange={this.onChange.bind(this)}
+							value={this.state.tramo}
+							/>						
+							</li>:""}
+							{!this.state.metros? 
+							
+							<li className="single_field">
+								<br/>
+								<label>Metros</label>
+							<input  type="number" min="1" placeholder="Metros" name="metro" 
+							onChange={this.onChange.bind(this)}
+							value={this.state.metro}
+							/>						
+							</li>:""
+							}
 						</ul>
-						<a className="btn btn-default update" href="">Cotizar</a>
-						
+						<button className="btn btn-default update" onClick={this.Calcular.bind(this)}>Cotizar</button>
+						<button className="btn btn-default update" onClick={this.Calcular.bind(this)}>Cotizar Placa</button>
 					</div>
 				</div>
 			
@@ -219,29 +325,34 @@ export default class Cotizador extends Component {
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
+						{ 
+							this.state.productosCotizados.map((e,index)=>{
+                                 
+						return(
+						<tr key={e.id}>
 							<td className="cart_product">
-								<Link to=" " ><img src={require('../../../images/img/angulo.jpg')} alt=""/>
-								 <p>Angulo</p>
+								<Link to="cotizador" ><img src={require('../../../images/img/angulo.jpg')} alt=""/>
+								 <p>{e.nombre.toUpperCase()}</p>
 								</Link>
 							</td>
 							<td className="cart_description">
-								<h4><Link to=" " >{"nombre"+this.state.nombre+" medida"+this.state.medida+" espesor"+this.state.espesor}</Link></h4>
-								<p>ID: 1089772</p>
+								<h4><Link to="cotizador" >{"nombre"+e.nombre+" medida"+e.medida+" espesor"+e.espesor}</Link></h4>
+								<p>ID: {e.id}</p>
 							</td>
 							<td className="cart_price">
-								<p>$59</p>
+								<p>{e.precio}</p>
 							</td>
 							<td className="cart_quantity">
 								<div className="cart_quantity_button">
                                     <Link to="cotizador"
-                                    onClick={this.Suma.bind(this)}
+                                    onClick={this.Suma.bind(this,index)}
                                     className="cart_quantity_up" > + </Link>
                                     <input className="cart_quantity_input" type="text" name="cantidad" 
-                                    onChange={this.onChange.bind(this)}
+									onChange={this.onChange.bind(this)}
+									value={e.cantidad}
                                      autoComplete="off" size="2"/>
                                     <Link   to="cotizador"
-                                     onClick={this.Resta.bind(this)}
+                                     onClick={this.Resta.bind(this,index)}
                                     className="cart_quantity_down" > - </Link>
 								</div>
 							</td>
@@ -250,10 +361,13 @@ export default class Cotizador extends Component {
 							</td>
 							<td >
 								<button className="btn btn-danger" 
-                                
+                                onClick={this.eliminarProducto.bind(this,index)}
                                 ><i className="fa fa-times"></i></button>
 							</td>
 						</tr>
+						)
+							})
+						}
 
 						
 					</tbody>
@@ -267,70 +381,70 @@ export default class Cotizador extends Component {
 								  <div className="carousel-inner">
 								       <div className="item active ">
 										 <div style={position}>
-										<a href=""><img 
+										<Link to="cotizador"><img 
 										className="img-circle img-thumbnail"
-										src={require('../../../images/img/angulo.jpg')} alt=""/></a>
+										src={require('../../../images/img/angulo.jpg')} alt=""/></Link>
 										<div style={mark}>Angulo</div>
 									     </div>
 										<div style={position}>
-										<a href=""><img 
+										<Link to="cotizador"><img 
 										className="img-circle img-thumbnail"
-										src={require('../../../images/img/solera.jpg')} alt=""/></a>
+										src={require('../../../images/img/solera.jpg')} alt=""/></Link>
 										<div style={mark}>Solera</div>
 									     </div>
 									<div style={position}>
-										<a href=""><img 
+										<Link to="cotizador"><img 
 										className="img-circle img-thumbnail"
-										src={require('../../../images/img/viga.jpg')} alt=""/></a>
+										src={require('../../../images/img/viga.jpg')} alt=""/></Link>
 										<div style={mark}>Viga</div>
 									     </div>
 										<div style={position}>
-										<a href=""><img 
+										<Link to="cotizador"><img 
 										className="img-circle img-thumbnail"
-										src={require('../../../images/img/tubu.jpg')} alt=""/></a>
+										src={require('../../../images/img/tubu.jpg')} alt=""/></Link>
 										<div style={mark}>Tubular</div>
 									     </div>
 	
 		
 									  </div>
 									  <div className="item">
-										<a href=""><img 
+										<Link to="cotizador"><img 
 										className="img-circle img-thumbnail"
-										src={require('../../../images/img/ptr.jpg')} alt=""/></a>
-										<a href=""><img 
+										src={require('../../../images/img/ptr.jpg')} alt=""/></Link>
+										<Link to="cotizador"><img 
 										className="img-circle img-thumbnail"
-										src={require('../../../images/img/canal.jpg')} alt=""/></a>
-										<a href=""><img 
+										src={require('../../../images/img/canal.jpg')} alt=""/></Link>
+										<Link to="cotizador"><img 
 										className="img-circle img-thumbnail"
-										src={require('../../../images/img/placa.jpg')} alt=""/></a>
-										<a href=""><img 
+										src={require('../../../images/img/placa.jpg')} alt=""/></Link>
+										<Link to="cotizador"><img 
 										className="img-circle img-thumbnail"
-										src={require('../../../images/img/viga.jpg')} alt=""/></a>
+										src={require('../../../images/img/viga.jpg')} alt=""/></Link>
 									  </div>
 									  <div className="item">
-										<a href=""><img 
+										<Link to="cotizador"><img 
 										className="img-circle img-thumbnail"
-										src={require('../../../images/img/cold.jpg')} alt=""/></a>
-										<a href=""><img 
+										src={require('../../../images/img/cold.jpg')} alt=""/></Link>
+										<Link to="cotizador"><img 
 										className="img-circle img-thumbnail"
-										src={require('../../../images/img/cua.jpg')} alt=""/></a>
-										<a href=""><img 
+										src={require('../../../images/img/cua.jpg')} alt=""/></Link>
+										<Link to="cotizador"><img 
 										className="img-circle img-thumbnail"
-										src={require('../../../images/img/lamina.jpg')} alt=""/></a>
-										<a href=""><img 
+										src={require('../../../images/img/lamina.jpg')} alt=""/></Link>
+										<Link to="cotizador"><img 
 										className="img-circle img-thumbnail"
-										src={require('../../../images/img/viga.jpg')} alt=""/></a>
+										src={require('../../../images/img/viga.jpg')} alt=""/></Link>
 									  </div>
 									  
 								  </div>
 
 							
-								<a className="left item-control" href="#similar-product" data-slide="prev">
+								<Link className="left item-control" to="#similar-product" data-slide="prev">
 								  <i className="fa fa-angle-left"></i>
-								</a>
-								<a className="right item-control" href="#similar-product" data-slide="next">
+								</Link>
+								<Link className="right item-control" to="#similar-product" data-slide="next">
 								  <i className="fa fa-angle-right"></i>
-								</a>
+								</Link>
 						  </div>
 			<div className="col-sm-6">
 					<div className="total_area">
@@ -340,8 +454,8 @@ export default class Cotizador extends Component {
 							<li>Iva<span>10</span></li>
 							<li>Total <span>$61</span></li>
 						</ul>
-							<a className="btn btn-default update" href="">Comprar</a>
-							<a className="btn btn-default check_out" href="">Agregar Al Carrito</a>
+							<Link className="btn btn-default update" to="">Comprar</Link>
+							<Link className="btn btn-default check_out" to="">Agregar Al Carrito</Link>
 					</div>
 				</div>
 				</div>

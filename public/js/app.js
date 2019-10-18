@@ -70607,14 +70607,22 @@ function (_Component) {
       productos: [],
       medidas: [],
       espesores: [],
+      productosCotizados: [],
+      id: '',
       nombre: '',
       medida: '',
       espesor: '',
       distancia: '',
       envio: '',
       subTotal: '',
-      total: ''
+      total: '',
+      errorNoEncontrado: false,
+      metrosBandera: false,
+      piezas: false,
+      metro: 0,
+      tramo: 1
     };
+    console.log(JSON.parse(sessionStorage['p']));
     return _this;
   }
 
@@ -70624,39 +70632,120 @@ function (_Component) {
       var _this2 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('/api/productosCotizador').then(function (response) {
-        console.log(response.data);
-
+        //console.log(response.data)
         _this2.setState({
           productos: response.data
         });
       });
     }
   }, {
+    key: "Calcular",
+    value: function Calcular() {
+      var _this3 = this;
+
+      var nombre = this.state.nombre + this.state.medida + this.state.espesor;
+      var id = this.state.id;
+      this.state.productos.map(function (e) {
+        if (nombre === e.nombre + e.medida + e.espesor) {
+          //console.log(e.nombre+e.medida+e.espesor+"encontrado"+e.peso+e.id+e.precio)
+          if (id === e.id) {
+            alert('ya seleccionó este producto si desea puede incrementar la cantidad desde el check box');
+            return;
+          }
+
+          var item = {
+            id: e.id,
+            nombre: e.nombre,
+            medida: e.medida,
+            espesor: e.espesor,
+            peso: e.peso,
+            precio: e.precio,
+            cantidad: 1
+          };
+
+          _this3.setState(function (estate) {
+            estate.productosCotizados.push(item);
+            var list = estate.productosCotizados;
+            sessionStorage.setItem('p', JSON.stringify(_this3.state.productosCotizados));
+            console.log(JSON.parse(sessionStorage['p'])); //console.log(item+"item",{list}+"list",estate.productosCotizados+"estate.pro")
+
+            return {
+              list: list,
+              id: e.id
+            };
+          });
+        } else {
+          _this3.setState({
+            errorNoEncontrado: true
+          });
+
+          return;
+        }
+      });
+    }
+  }, {
+    key: "eliminarProducto",
+    value: function eliminarProducto(e) {
+      var productos = this.state.productosCotizados;
+      productos.splice(e, 1);
+      this.setState({
+        productosCotizados: productos,
+        id: ''
+      });
+    }
+  }, {
     key: "Suma",
-    value: function Suma() {
-      var j = this.state.cantidad + 1;
-      this.setState(_defineProperty({}, e.cantidad.target.name, i));
+    value: function Suma(e) {
+      this.setState(function (state) {
+        var list = state.productosCotizados[e].cantidad++;
+        return {
+          list: list
+        };
+      });
     }
   }, {
     key: "Resta",
-    value: function Resta() {
-      var j = this.state.cantidad - 1;
-      if (j == 0) return;
-      this.setState({
-        cantidad: i
+    value: function Resta(e) {
+      if (this.state.productosCotizados[e].cantidad == 1) return;
+      this.setState(function (state) {
+        var list = state.productosCotizados[e].cantidad--;
+        return {
+          list: list
+        };
       });
     }
   }, {
     key: "onChange",
     value: function onChange(e) {
-      var _this3 = this;
+      var _this4 = this;
 
       var array = [];
       var arrayEspesores = [];
       var i = 0;
       var j = 0;
-      var k = 0;
+      var bandera = false;
+      var banderaPiezas = false;
       var dato = [e.target.name];
+
+      switch (e.target.value) {
+        case "TUBULAR":
+        case "VARILLA CORRUGADA":
+        case "POLIN MONTEN":
+        case "PULIDO":
+          bandera = true;
+          break;
+
+        case "VIGA IPS":
+        case "VIGA IPR":
+        case "CANAL":
+        case "INSUMO":
+        case "ABRASIVO":
+          banderaPiezas = true;
+          break;
+
+        default:
+          break;
+      }
 
       switch (dato[0]) {
         case "nombre":
@@ -70670,13 +70759,18 @@ function (_Component) {
             }
           });
           this.setState({
-            medidas: array
+            medidas: array,
+            metros: bandera,
+            piezas: banderaPiezas
           });
           break;
 
         case "medida":
+          this.setState({
+            medida: e.target.value
+          });
           this.state.productos.map(function (el) {
-            if (el.nombre + el.medida == _this3.state.nombre + e.target.value) {
+            if (el.nombre + el.medida == _this4.state.nombre + e.target.value) {
               arrayEspesores[j] = el.espesor;
               j++;
             }
@@ -70686,13 +70780,22 @@ function (_Component) {
           });
           break;
 
+        case "espesor":
+          this.setState({
+            espesor: e.target.value
+          });
+          break;
+
         default:
+          this.setState(_defineProperty({}, e.target.name, e.target.value));
           break;
       }
     }
   }, {
     key: "render",
     value: function render() {
+      var _this5 = this;
+
       var mark = {
         position: 'absolute',
 
@@ -70725,13 +70828,16 @@ function (_Component) {
         className: "heading"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
         className: "align-center"
-      }, "Qu\xE9 necesitas ?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Haz Tu Cotizaci\xF3n y Rec\xEDbelo en la Puerta de tu hogar ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Qu\xE9 necesitas ?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Cotiza! Haz Tu Pedido y Rec\xEDbelo en la Puerta de tu Domicilio "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "No pagues fletes costosos! ni pierdas tiempo y dinero buscando ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), " tenemos todo lo que necesitas")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-sm-12"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "chose_area"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+      }, this.state.metros ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "alert alert-primary",
+        role: "alert"
+      }, "producto solo disponible por pieza") : "", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "user_info"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "single_field"
@@ -70742,7 +70848,10 @@ function (_Component) {
         return e.nombre;
       }))), //console.log(noRepeat),
       this.noRepeat.map(function (e) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, e);
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          key: e,
+          value: e
+        }, e);
       })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "single_field"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Medida"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
@@ -70753,7 +70862,10 @@ function (_Component) {
         return e;
       }))), //console.log(noRepeat),
       this.noRepeat.map(function (e) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, e);
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          key: e,
+          value: e
+        }, e);
       })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         className: "single_field"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Espesor"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
@@ -70764,11 +70876,35 @@ function (_Component) {
         return e;
       }))), //console.log(noRepeat),
       this.noRepeat.map(function (e) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, e);
-      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          key: e,
+          value: e
+        }, e);
+      })))), !this.state.piezas ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "single_field"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Piezas"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "number",
+        min: "1",
+        placeholder: "Piezas",
+        name: "tramo",
+        onChange: this.onChange.bind(this),
+        value: this.state.tramo
+      })) : "", !this.state.metros ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "single_field"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Metros"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "number",
+        min: "1",
+        placeholder: "Metros",
+        name: "metro",
+        onChange: this.onChange.bind(this),
+        value: this.state.metro
+      })) : ""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "btn btn-default update",
-        href: ""
-      }, "Cotizar")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        onClick: this.Calcular.bind(this)
+      }, "Cotizar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn btn-default update",
+        onClick: this.Calcular.bind(this)
+      }, "Cotizar Placa")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         id: "cart_items"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
@@ -70788,47 +70924,53 @@ function (_Component) {
         className: "quantity"
       }, "Cantidad"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
         className: "total"
-      }, "Total"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
-        className: "cart_product"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: " "
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: __webpack_require__(/*! ../../../images/img/angulo.jpg */ "./images/img/angulo.jpg"),
-        alt: ""
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Angulo"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
-        className: "cart_description"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: " "
-      }, "nombre" + this.state.nombre + " medida" + this.state.medida + " espesor" + this.state.espesor)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "ID: 1089772")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
-        className: "cart_price"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "$59")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
-        className: "cart_quantity"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "cart_quantity_button"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "cotizador",
-        onClick: this.Suma.bind(this),
-        className: "cart_quantity_up"
-      }, " + "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "cart_quantity_input",
-        type: "text",
-        name: "cantidad",
-        onChange: this.onChange.bind(this),
-        autoComplete: "off",
-        size: "2"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "cotizador",
-        onClick: this.Resta.bind(this),
-        className: "cart_quantity_down"
-      }, " - "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
-        className: "cart_total"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        className: "cart_total_price"
-      }, "$59")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "btn btn-danger"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fa fa-times"
-      }))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Total"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody", null, this.state.productosCotizados.map(function (e, index) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+          key: e.id
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+          className: "cart_product"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          to: "cotizador"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          src: __webpack_require__(/*! ../../../images/img/angulo.jpg */ "./images/img/angulo.jpg"),
+          alt: ""
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, e.nombre.toUpperCase()))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+          className: "cart_description"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          to: "cotizador"
+        }, "nombre" + e.nombre + " medida" + e.medida + " espesor" + e.espesor)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "ID: ", e.id)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+          className: "cart_price"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, e.precio)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+          className: "cart_quantity"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "cart_quantity_button"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          to: "cotizador",
+          onClick: _this5.Suma.bind(_this5, index),
+          className: "cart_quantity_up"
+        }, " + "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+          className: "cart_quantity_input",
+          type: "text",
+          name: "cantidad",
+          onChange: _this5.onChange.bind(_this5),
+          value: e.cantidad,
+          autoComplete: "off",
+          size: "2"
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          to: "cotizador",
+          onClick: _this5.Resta.bind(_this5, index),
+          className: "cart_quantity_down"
+        }, " - "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+          className: "cart_total"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          className: "cart_total_price"
+        }, "$59")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          className: "btn btn-danger",
+          onClick: _this5.eliminarProducto.bind(_this5, index)
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+          className: "fa fa-times"
+        }))));
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, " Produtos sugeridos "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "similar-product",
@@ -70840,8 +70982,8 @@ function (_Component) {
         className: "item active "
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         style: position
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: ""
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "cotizador"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "img-circle img-thumbnail",
         src: __webpack_require__(/*! ../../../images/img/angulo.jpg */ "./images/img/angulo.jpg"),
@@ -70850,8 +70992,8 @@ function (_Component) {
         style: mark
       }, "Angulo")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         style: position
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: ""
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "cotizador"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "img-circle img-thumbnail",
         src: __webpack_require__(/*! ../../../images/img/solera.jpg */ "./images/img/solera.jpg"),
@@ -70860,8 +71002,8 @@ function (_Component) {
         style: mark
       }, "Solera")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         style: position
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: ""
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "cotizador"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "img-circle img-thumbnail",
         src: __webpack_require__(/*! ../../../images/img/viga.jpg */ "./images/img/viga.jpg"),
@@ -70870,8 +71012,8 @@ function (_Component) {
         style: mark
       }, "Viga")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         style: position
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: ""
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "cotizador"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "img-circle img-thumbnail",
         src: __webpack_require__(/*! ../../../images/img/tubu.jpg */ "./images/img/tubu.jpg"),
@@ -70880,65 +71022,65 @@ function (_Component) {
         style: mark
       }, "Tubular"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: ""
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "cotizador"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "img-circle img-thumbnail",
         src: __webpack_require__(/*! ../../../images/img/ptr.jpg */ "./images/img/ptr.jpg"),
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "cotizador"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "img-circle img-thumbnail",
         src: __webpack_require__(/*! ../../../images/img/canal.jpg */ "./images/img/canal.jpg"),
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "cotizador"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "img-circle img-thumbnail",
         src: __webpack_require__(/*! ../../../images/img/placa.jpg */ "./images/img/placa.jpg"),
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "cotizador"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "img-circle img-thumbnail",
         src: __webpack_require__(/*! ../../../images/img/viga.jpg */ "./images/img/viga.jpg"),
         alt: ""
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: ""
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "cotizador"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "img-circle img-thumbnail",
         src: __webpack_require__(/*! ../../../images/img/cold.jpg */ "./images/img/cold.jpg"),
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "cotizador"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "img-circle img-thumbnail",
         src: __webpack_require__(/*! ../../../images/img/cua.jpg */ "./images/img/cua.jpg"),
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "cotizador"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "img-circle img-thumbnail",
         src: __webpack_require__(/*! ../../../images/img/lamina.jpg */ "./images/img/lamina.jpg"),
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "cotizador"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "img-circle img-thumbnail",
         src: __webpack_require__(/*! ../../../images/img/viga.jpg */ "./images/img/viga.jpg"),
         alt: ""
-      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         className: "left item-control",
-        href: "#similar-product",
+        to: "#similar-product",
         "data-slide": "prev"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fa fa-angle-left"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         className: "right item-control",
-        href: "#similar-product",
+        to: "#similar-product",
         "data-slide": "next"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fa fa-angle-right"
@@ -70946,12 +71088,12 @@ function (_Component) {
         className: "col-sm-6"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "total_area"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Sub Total ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$59")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Flete", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$2")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Iva", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "10")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Total ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$61"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Sub Total ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$59")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Flete", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$2")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Iva", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "10")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Total ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$61"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         className: "btn btn-default update",
-        href: ""
-      }, "Comprar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        to: ""
+      }, "Comprar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         className: "btn btn-default check_out",
-        href: ""
+        to: ""
       }, "Agregar Al Carrito")))))));
     }
   }]);
@@ -71517,6 +71659,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _formularioenvio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./formularioenvio */ "./resources/js/components/Usuario/formularioenvio.js");
 /* harmony import */ var _Profile__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Profile */ "./resources/js/components/Usuario/Profile.js");
+/* harmony import */ var _UserFunctions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./UserFunctions */ "./resources/js/components/Usuario/UserFunctions.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -71534,6 +71677,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -71558,9 +71702,16 @@ function (_Component) {
   }
 
   _createClass(Home, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      Object(_UserFunctions__WEBPACK_IMPORTED_MODULE_4__["getProfile"])().then(function (res) {
+        console.log(res + "consola aplicada");
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, localStorage.usertoken ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
@@ -71641,7 +71792,9 @@ function (_Component) {
         exact: true,
         path: "/home/perfil",
         component: _Profile__WEBPACK_IMPORTED_MODULE_3__["default"]
-      }))));
+      }))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
+        to: "/"
+      }));
     }
   }]);
 
