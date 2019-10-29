@@ -13,7 +13,7 @@ class Landing extends Component {
         <div>
         <li><Link to="/home/login"><i className="fa fa-lock"></i> Login</Link></li>
         <li><Link to="/home/register"><i className="fa fa-registered"></i> Registro</Link></li>
-        <li><Link to=""><i className="fa fa-shopping-cart"></i> Carrito</Link></li>
+        <li><Link to=""><i className="fa fa-shopping-cart"></i>Carrito ({JSON.parse(localStorage.getItem('p')).length}) </Link></li>
         
         </div>
     )
@@ -21,7 +21,7 @@ class Landing extends Component {
     const userLink = (
         <div>
             <li><Link to="/home"><i className="fa fa-user"></i>Mi Cuenta</Link></li>
-            <li><Link to=""><i className="fa fa-shopping-cart"></i> Carrito</Link></li>
+            <li><Link to=""><i className="fa fa-shopping-cart"></i>Carrito ({JSON.parse(localStorage.getItem('p')).length}) </Link></li>
             <li><Link to=""
             onClick={this.logOut.bind(this)}
             ><i className="fa fa-sign-out-alt"></i>Salir</Link></li>

@@ -25,16 +25,33 @@ export default class Cotizador extends Component {
 			errorNoEncontrado:false,
 			metrosBandera:false,
 			piezas:false,
+			placa:false,
 			metro:0,
 			tramo:1
 		}
-		console.log(JSON.parse(sessionStorage['p']))
+	
 		
 	}
 	componentDidMount(){
 	    axios.get('/api/productosCotizador').then(response=>{
 			//console.log(response.data)
 			  this.setState({productos:response.data})  
+		})
+		if(this.state.productosCotizados.length===0){
+			this.setState({
+				productosCotizados:JSON.parse(localStorage['p'])
+			})
+		}
+
+	}
+	clickPlaca(){
+		this.setState({
+			placa:true
+		})
+	}
+	clickPlacaCerrar(){
+		this.setState({
+			placa:false
 		})
 	}
 	Calcular(){
@@ -58,9 +75,9 @@ export default class Cotizador extends Component {
 				
 					const list=estate.productosCotizados;
 					
-						sessionStorage.setItem('p',JSON.stringify(this.state.productosCotizados));
+						localStorage.setItem('p',JSON.stringify(this.state.productosCotizados));
 				
-				 console.log(JSON.parse(sessionStorage['p']))
+				// console.log(JSON.parse(localStorage['p']))
                    //console.log(item+"item",{list}+"list",estate.productosCotizados+"estate.pro")
 					return{
 						list,
@@ -83,6 +100,7 @@ export default class Cotizador extends Component {
 			   productos.splice(e,1);
 				this.setState({productosCotizados:productos,
 				id:''})	
+				localStorage.setItem('p',JSON.stringify(this.state.productosCotizados));
 	}
     Suma(e){
    this.setState(state=>{
@@ -302,12 +320,109 @@ export default class Cotizador extends Component {
 							}
 						</ul>
 						<button className="btn btn-default update" onClick={this.Calcular.bind(this)}>Cotizar</button>
-						<button className="btn btn-default update" onClick={this.Calcular.bind(this)}>Cotizar Placa</button>
+						<button className="btn btn-default update" onClick={this.clickPlaca.bind(this)}>Cotizar Placa</button>
 					</div>
 				</div>
-			
+				
 			</div>
-		</div>
+			{/*   aqui contengo el cotizador de placas*/}
+			<div className="row">
+			{this.state.placa? 
+             <div className="col-sm-12">
+					<div className="chose_area">
+					 <div class="alert alert-primary" role="alert">
+                  Necesitas ayuda? chatea con nosotros y aclaramos todas tus dudas 
+                    </div>
+						<ul className="user_info">
+							<p>Escoja unidad de medida </p>
+							<br/>
+							<li > 
+								<label>Centimetros</label>
+								<input type="radio"/ >
+								<label>Pulgadas</label>
+								<input type="radio"/ >
+							</li>
+							<li className="single_field">
+							
+								<label>Seleccione</label>
+								<select onChange={this.onChange.bind(this)}
+							    
+								name="nombre">
+									<option>Cuadrado</option>
+									<option>Rectángulo</option>
+									<option>Cartabón</option>
+									<option>Disco</option>
+									<option>Brida</option>
+								</select>
+								
+							</li>
+							<li className="single_field">
+								<label>Medida 1</label>
+								<select onClick={this.onChange.bind(this)} 
+								onChange={this.onChange.bind(this)}
+								name="medida">
+								<option>Medida</option>
+								{  this.noRepeat=[... new Set(
+										  this.state.medidas.map(e=>
+											  e
+										  )
+									  )],
+									  //console.log(noRepeat),
+									  this.noRepeat.map(e=>{
+									         return(
+											<option
+											key={e} value={e}
+											>{e}</option>
+											 )
+											
+									  })}
+									
+								</select>
+							
+							</li>
+							<li className="single_field">
+							<br/>
+								<label>Medida 2</label>
+								<select onClick={this.onChange.bind(this)} 
+								onChange={this.onChange.bind(this)} name="espesor">
+								<option>Espesor </option>
+								{   this.noRepeat=[... new Set(
+										  this.state.espesores.map(e=>
+											      e
+										  )
+									  )],
+									  //console.log(noRepeat),
+									  this.noRepeat.map(e=>{
+									         return(
+										
+											<option
+											key={e} value={e}
+											>{e}</option>
+											 )
+											
+									  })}
+									
+								</select>
+								
+							</li>
+							
+							{!this.state.piezas? <li className="single_field">
+							<br/>
+								<label>Piezas</label>
+							<input  type="number" min="1" placeholder="Piezas" name="tramo"
+							onChange={this.onChange.bind(this)}
+							value={this.state.tramo}
+							/>						
+							</li>:""}
+						
+						</ul>
+						<button className="btn btn-default update" onClick={this.Calcular.bind(this)}>Cotizar</button>
+						<button className="btn btn-default update" onClick={this.clickPlacaCerrar.bind(this)}>Cerrar</button>
+					</div>
+				</div>:""}
+				</div>
+		</div>{/*cierra div container de cotizadores*/}
+		
 	</section>
           <section id="cart_items">
 		<div className="container">
@@ -326,7 +441,8 @@ export default class Cotizador extends Component {
 					</thead>
 					<tbody>
 						{ 
-							this.state.productosCotizados.map((e,index)=>{
+                           
+						  this.state.productosCotizados.map((e,index)=>{
                                  
 						return(
 						<tr key={e.id}>
@@ -454,8 +570,8 @@ export default class Cotizador extends Component {
 							<li>Iva<span>10</span></li>
 							<li>Total <span>$61</span></li>
 						</ul>
-							<Link className="btn btn-default update" to="">Comprar</Link>
-							<Link className="btn btn-default check_out" to="">Agregar Al Carrito</Link>
+							<Link className="btn btn-default update" to="">Agregar Al Carrito</Link>
+							
 					</div>
 				</div>
 				</div>

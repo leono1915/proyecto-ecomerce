@@ -70619,10 +70619,10 @@ function (_Component) {
       errorNoEncontrado: false,
       metrosBandera: false,
       piezas: false,
+      placa: false,
       metro: 0,
       tramo: 1
     };
-    console.log(JSON.parse(sessionStorage['p']));
     return _this;
   }
 
@@ -70636,6 +70636,26 @@ function (_Component) {
         _this2.setState({
           productos: response.data
         });
+      });
+
+      if (this.state.productosCotizados.length === 0) {
+        this.setState({
+          productosCotizados: JSON.parse(localStorage['p'])
+        });
+      }
+    }
+  }, {
+    key: "clickPlaca",
+    value: function clickPlaca() {
+      this.setState({
+        placa: true
+      });
+    }
+  }, {
+    key: "clickPlacaCerrar",
+    value: function clickPlacaCerrar() {
+      this.setState({
+        placa: false
       });
     }
   }, {
@@ -70666,8 +70686,8 @@ function (_Component) {
           _this3.setState(function (estate) {
             estate.productosCotizados.push(item);
             var list = estate.productosCotizados;
-            sessionStorage.setItem('p', JSON.stringify(_this3.state.productosCotizados));
-            console.log(JSON.parse(sessionStorage['p'])); //console.log(item+"item",{list}+"list",estate.productosCotizados+"estate.pro")
+            localStorage.setItem('p', JSON.stringify(_this3.state.productosCotizados)); // console.log(JSON.parse(localStorage['p']))
+            //console.log(item+"item",{list}+"list",estate.productosCotizados+"estate.pro")
 
             return {
               list: list,
@@ -70692,6 +70712,7 @@ function (_Component) {
         productosCotizados: productos,
         id: ''
       });
+      localStorage.setItem('p', JSON.stringify(this.state.productosCotizados));
     }
   }, {
     key: "Suma",
@@ -70903,8 +70924,71 @@ function (_Component) {
         onClick: this.Calcular.bind(this)
       }, "Cotizar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "btn btn-default update",
+        onClick: this.clickPlaca.bind(this)
+      }, "Cotizar Placa")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, this.state.placa ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "chose_area"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        "class": "alert alert-primary",
+        role: "alert"
+      }, "Necesitas ayuda? chatea con nosotros y aclaramos todas tus dudas"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "user_info"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Escoja unidad de medida "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Centimetros"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "radio"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Pulgadas"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "radio"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "single_field"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Seleccione"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+        onChange: this.onChange.bind(this),
+        name: "nombre"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Cuadrado"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Rect\xE1ngulo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Cartab\xF3n"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Disco"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Brida"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "single_field"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Medida 1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+        onClick: this.onChange.bind(this),
+        onChange: this.onChange.bind(this),
+        name: "medida"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Medida"), (this.noRepeat = _toConsumableArray(new Set(this.state.medidas.map(function (e) {
+        return e;
+      }))), //console.log(noRepeat),
+      this.noRepeat.map(function (e) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          key: e,
+          value: e
+        }, e);
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "single_field"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Medida 2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+        onClick: this.onChange.bind(this),
+        onChange: this.onChange.bind(this),
+        name: "espesor"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Espesor "), (this.noRepeat = _toConsumableArray(new Set(this.state.espesores.map(function (e) {
+        return e;
+      }))), //console.log(noRepeat),
+      this.noRepeat.map(function (e) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+          key: e,
+          value: e
+        }, e);
+      })))), !this.state.piezas ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "single_field"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Piezas"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "number",
+        min: "1",
+        placeholder: "Piezas",
+        name: "tramo",
+        onChange: this.onChange.bind(this),
+        value: this.state.tramo
+      })) : ""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn btn-default update",
         onClick: this.Calcular.bind(this)
-      }, "Cotizar Placa")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+      }, "Cotizar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn btn-default update",
+        onClick: this.clickPlacaCerrar.bind(this)
+      }, "Cerrar"))) : ""))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         id: "cart_items"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
@@ -71090,9 +71174,6 @@ function (_Component) {
         className: "total_area"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Sub Total ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$59")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Flete", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$2")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Iva", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "10")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Total ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "$61"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         className: "btn btn-default update",
-        to: ""
-      }, "Comprar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        className: "btn btn-default check_out",
         to: ""
       }, "Agregar Al Carrito")))))));
     }
@@ -73263,7 +73344,7 @@ function (_Component) {
         to: ""
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fa fa-shopping-cart"
-      }), " Carrito")));
+      }), "Carrito (", JSON.parse(localStorage.getItem('p')).length, ") ")));
       var userLink = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/home"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
@@ -73272,7 +73353,7 @@ function (_Component) {
         to: ""
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fa fa-shopping-cart"
-      }), " Carrito")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      }), "Carrito (", JSON.parse(localStorage.getItem('p')).length, ") ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "",
         onClick: this.logOut.bind(this)
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
