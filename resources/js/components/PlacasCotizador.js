@@ -17,7 +17,7 @@ class Placas extends Component{
   
     }
     componentDidMount(){
-        console.log(this.props.productos)
+        console.log(this.props)
         this.setState({
            productos:this.props.productos
         })
@@ -166,7 +166,7 @@ contexto.fill();
     }
 }
 
-export default Placas
+export default withRouter(Placas)
 
 
 

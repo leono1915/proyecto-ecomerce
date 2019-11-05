@@ -3,11 +3,43 @@ import logo from '../../../images/img/logo_opt.png';
 import Galeriaprincipal from './galeriaprincipal';
 import Error404 from './Error404';
 import Landing from './navbar';
+import Carrito from './Carrito';
 import Cotizador from './Cotizador';
 import Usuarios from './Usuario';
 import { BrowserRouter as Router, Route, Link ,Switch} from 'react-router-dom';
+let i=0;
 export default class Header extends Component {
+    constructor(){
+		super();
+		this.state={
+			cantidad:0,
+			productos:[]
+		}
+
+	}
+  componentDidMount(){
+	  if(this.state.productos.length===0){
+		  this.setState({
+			  productos:JSON.parse(localStorage['carrito']),
+			  cantidad:JSON.parse(localStorage['carrito']).length
+		  })
+	  }
+  }
+   cambio(e){
+
+	this.setState(el=>{
+		   
+		const list=el.productos.push(e);
+
+		return{
+		 list,
+		 cantidad:e.length
+		  }
+	})
+	   console.log(e.length)
+   }
     render(){
+		const cambio=this.state.cantidad;
         const head={
             backgroundColor:"#0c0b0bc9"
         }
@@ -98,7 +130,8 @@ export default class Header extends Component {
 						</div>
 					</div>
 				</div>
-				<Landing/>
+				<Landing      cantidadCarro={cambio}  />
+				
 			</div>
 		</div>
 		
@@ -134,9 +167,10 @@ export default class Header extends Component {
        
 		<Switch>
 		<Route exact path ="/Home" component ={Usuarios}/>
-		<Route exact path ="/Home/datosenvio" component ={Usuarios}/>
+		<Route exact path ="/Home/datosenvio" component ={Usuarios }/>
 	    <Route  exact path="/" component={Galeriaprincipal}/>
-		<Route  exact path="/cotizador" component={Cotizador}/>
+		<Route  exact path="/cotizador" render={(props) => <Cotizador {...props} agregarCarrito={this.cambio.bind(this)}/>}/>
+		<Route  exact path="/carrito" render={(props) => <Carrito {...props} carrito={this.state.productos}/>}/>
 		<Route exact path="/home/register" component={Usuarios} />
         <Route exact path="/home/login" component={Usuarios} />
         <Route exact path="/home/perfil" component={Usuarios} />

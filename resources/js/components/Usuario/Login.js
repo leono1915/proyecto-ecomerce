@@ -50,7 +50,7 @@ class Login extends Component {
                             </h1>
                             {this.state.errors? <p> Credenciales Inválidas</p>: ""}
                             <div className="form-group">
-                                <label htmlFor="email">Email address</label>
+                                <label htmlFor="email">Email </label>
                                 <input
                                     type="email"
                                     className="form-control"

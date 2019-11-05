@@ -6,7 +6,8 @@ class Profile extends Component {
         super()
         this.state = {
             name: '',
-            email: ''
+            email: '',
+            re:''
         }
     }
 
@@ -15,7 +16,8 @@ class Profile extends Component {
             console.log(res+"consola aplicada")
             this.setState({
                 name: res.name,
-                email: res.email
+                email: res.email,
+                re:res.name
             })
         })
     }
@@ -23,7 +25,7 @@ class Profile extends Component {
     render() {
         return (
           
-            localStorage.usertoken ? 
+            localStorage.usertoken? 
             <div className="col-sm-6 jumbotron">
                 <div className="form-group">
                    

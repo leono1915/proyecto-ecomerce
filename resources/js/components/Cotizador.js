@@ -1,14 +1,21 @@
 import React, { Component} from 'react';
 import Placas from './PlacasCotizador';
-
 import { Link} from 'react-router-dom';
 import axios from 'axios';
-
+/*
+,()=>{
+				setTimeout(() => {
+					this.setState({
+						banderaCarro:false,
+						items:this.state.productosCotizados.length
+					 })
+				 }, 1000);  
+			 } */
 
 
 export default class Cotizador extends Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state={
             productos:[],
 			medidas:[],
@@ -27,7 +34,10 @@ export default class Cotizador extends Component {
 			piezas:false,
 			placa:false,
 			metro:0,
-			tramo:1
+			tramo:1,
+			banderaCarro:true,
+			items:0
+
 		}
 	
 		
@@ -39,21 +49,30 @@ export default class Cotizador extends Component {
 		})
 		if(this.state.productosCotizados.length===0){
 			this.setState({
-				productosCotizados:JSON.parse(localStorage['p'])
+				productosCotizados:JSON.parse(localStorage['p']),
+				
 			})
 		}
-
+   
 	}
 	clickPlaca(){
 		this.setState({
 			placa:true
 		})
+		
 	}
 	clickPlacaCerrar(){
 		console.log('entro')
 		this.setState({
 			placa:false
 		})
+	}
+	eliminarProductos(){
+		this.props.agregarCarrito(this.state.productosCotizados)
+		this.setState({
+			productosCotizados:[]
+		})
+		localStorage.clear();
 	}
 	Calcular(){
 		
@@ -82,8 +101,10 @@ export default class Cotizador extends Component {
                    //console.log(item+"item",{list}+"list",estate.productosCotizados+"estate.pro")
 					return{
 						list,
-					    id:e.id}
-				  })				
+						id:e.id,
+					     }
+				  } )
+				 			
 			  }
 			  else{
 				  this.setState({
@@ -100,7 +121,8 @@ export default class Cotizador extends Component {
 			
 			   productos.splice(e,1);
 				this.setState({productosCotizados:productos,
-				id:''})	
+				id:''
+				})	
 				localStorage.setItem('p',JSON.stringify(this.state.productosCotizados));
 	}
     Suma(e){
@@ -189,6 +211,7 @@ export default class Cotizador extends Component {
     }
    
     render() {
+		
 		const mark={
 			
 				position: 'absolute',    /* posición absolute con respecto al padre */
@@ -480,7 +503,11 @@ export default class Cotizador extends Component {
 							<li>Iva<span>10</span></li>
 							<li>Total <span>$61</span></li>
 						</ul>
-							<Link className="btn btn-default update" to="">Agregar Al Carrito</Link>
+							<Link className="btn btn-default update" to="#top"
+							onClick={
+							         this.eliminarProductos.bind(this)}
+							  
+							>Agregar Al Carrito</Link>
 							
 					</div>
 				</div>

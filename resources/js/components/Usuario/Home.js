@@ -8,20 +8,21 @@ import { getProfile } from './UserFunctions';
     constructor(){
         super();
         this.state={
-            redi:false
+            redi:false,
+            res:null
         }
     }
-    componentDidMount() {
-        getProfile().then(res => {
-            console.log(res+"consola aplicada")
-            
+    async componentDidMount() {
+        await getProfile().then(res => {
+            console.log(res+"consola aplicada  1")
+            this.setState({res:res})
         })
     }
     render(){
         return(
             <div>
                 
-               { localStorage.usertoken ?     
+               { localStorage.usertoken&&this.state.res!==undefined?     
             <div className="container">
     <div className="row">
 
@@ -83,7 +84,7 @@ import { getProfile } from './UserFunctions';
        
        </div>
    </div>
-   : <Redirect to="/"/>}
+   : <Redirect to="/home/login"/>}
    </div>
 
         )
