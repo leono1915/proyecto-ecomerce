@@ -1,166 +1,149 @@
-import React ,{Component,Fragment} from 'react';
+import React, { Component, Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
 
 
 
-class Placas extends Component{
-    constructor(props){
-      super(props);
-      this.state={
-         piezas:false,
-         tramo:false,
-         productos:[],
-         tramo:1
+class Placas extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            piezas: false,
+            tramo: false,
+            productos: [],
+            tramo: 1
+        }
+
+
+
     }
-   
-  
-  
-    }
-    componentDidMount(){
+    componentDidMount() {
         console.log(this.props)
         this.setState({
-           productos:this.props.productos
+            productos: this.props.productos
         })
-       this.dibujar.bind(this);
+      
     }
-    dibujar(){
-        const ALTURA_CANVAS = 200,
-	ANCHURA_CANVAS = 400;
-
-// Obtener el elemento del DOM
-const canvas =document.getElementById('canvas');
-canvas.width = ANCHURA_CANVAS;
-canvas.height = ALTURA_CANVAS;
-// Del canvas, obtener el contexto para poder dibujar
-const contexto = canvas.getContext("2d");
-// Estilo de dibujo
-// Grosor de línea
-contexto.lineWidth = 5;
-// Color de línea
-contexto.strokeStyle = "#212121";
-// Color de relleno
-contexto.fillStyle = "#000000";
-// Las variables indican el nombre de cada argumento para
-// la función arc
-let x = 100,
-	y = 100,
-	radio = 50,
-	anguloInicio = 0,
-	anguloFin = Math.PI * 2;
-contexto.arc(x, y, radio, anguloInicio, anguloFin);
-// Hacemos que se dibuje
-contexto.stroke();
-// Lo rellenamos
-contexto.fill();
-    }
-    calcular(){
+   
+    calcular() {
 
     }
-    onChange(e){
+    onChange(e) {
         console.log([e.target.value.name])
     }
-    render(){
-      
-        return(
+    render() {
+        const marginLeft = {
+            marginLeft: '10px',
+            marginTop: '20px'
+        }
+        return (
             <Fragment>
-               <div className="row">
-			<div className="col-sm-12">
-            <canvas  id="canvas"/>
-          
-            </div>
-            <div className="col-sm-12">
-                   <div className="chose_area">
-                    <div className="alert alert-primary" role="alert">
-                 Necesitas ayuda? chatea con nosotros y aclaramos todas tus dudas 
+                <div className="row">
+                   
+                    <div className="col-sm-12">
+                        <div className="chose_area">
+                            <div className="alert alert-primary" role="alert">
+                                Necesitas ayuda? chatea con nosotros y aclaramos todas tus dudas
                    </div>
-                       <ul className="user_info">
-                           <p>Escoja unidad de medida </p>
-                           <br/>
-                           <li > 
-                               <label>Centimetros</label>
-                               <input type="radio"/ >
-                               <label>Pulgadas</label>
-                               <input type="radio"/ >
-                           </li>
-                           <li className="single_field">
-                           
-                               <label>Seleccione</label>
-                               <select onChange={this.onChange.bind(this)}
-                               
-                               name="nombre">
-                                   <option>Cuadrado</option>
-                                   <option>Rectángulo</option>
-                                   <option>Cartabón</option>
-                                   <option>Disco</option>
-                                   <option>Brida</option>
-                               </select>
-                               
-                           </li>
-                           <li className="single_field">
-                               <label>Medida 1</label>
-                               <select onClick={this.onChange.bind(this)} 
-                               onChange={this.onChange.bind(this)}
-                               name="medida">
-                               <option>Medida</option>
-                               {  this.noRepeat=[... new Set(
-                                         this.state.productos.map(e=>
-                                             e.medida
-                                         )
-                                     )],
-                                     //console.log(noRepeat),
-                                     this.noRepeat.map(e=>{
-                                            return(
-                                           <option
-                                           key={e} value={e}
-                                           >{e}</option>
-                                            )
-                                           
-                                     })}
-                                   
-                               </select>
-                           
-                           </li>
-                           <li className="single_field">
-                           <br/>
-                               <label>Medida 2</label>
-                               <select onClick={this.onChange.bind(this)} 
-                               onChange={this.onChange.bind(this)} name="espesor">
-                               <option>Espesor </option>
-                               {   this.noRepeat=[... new Set(
-                                        this.state.productos.map(e=>
-                                                 e.espesor
-                                         )
-                                     )],
-                                     //console.log(noRepeat),
-                                     this.noRepeat.map(e=>{
-                                            return(
-                                       
-                                           <option
-                                           key={e} value={e}
-                                           >{e}</option>
-                                            )
-                                           
-                                     })}
-                                   
-                               </select>
-                               
-                           </li>
-                           
-                           {/*!this.state.piezas? <li className="single_field">
-                           <br/>
-                               <label>Piezas</label>
-                           <input  type="number" min="1" placeholder="Piezas" name="tramo"
-                           onChange={this.onChange.bind(this)}
-                           value={this.state.tramo}
-                           />						
-                                    </li>:""*/}
-                       
-                       </ul>
-                       <button className="btn btn-default update" onClick={this.calcular.bind(this)}>Cotizar</button>
-                       <button className="btn btn-default update" onClick={this.props.clickPlaca}>Cerrar</button>
-                   </div>
-               </div>
-               </div>
+                            <div className="row">
+                                <div className="col-sm-4" >
+                                    <label class="radio-inline" style={marginLeft}>
+                                        <input type="radio" name="opcionMedida" />Pulgadas</label>
+                                    <label class="radio-inline" style={marginLeft}>
+                                        <input type="radio" name="opcionMedida" />Centimetros</label>
+                                </div>
+                                <div className="col-sm-4" >
+                                    <select  style={marginLeft} onChange={this.onChange.bind(this)}
+
+                                        name="nombre">
+                                        <option>Cuadrado</option>
+                                        <option>Rectángulo</option>
+                                        <option>Cartabón</option>
+                                        <option>Disco</option>
+                                        <option>Brida</option>
+                                    </select>
+
+                                </div>
+                                <div className="col-md-4">
+                                    <label style={marginLeft}>Medida <input type="number"   />   </label>
+
+                                </div>
+
+                            </div>
+                            <div className="row" style={{marginTop:'20px'}}>
+                            <div className="col-md-8 col-sm-12">
+                                <div className="row">
+                                <div className="col-md-3 col-sm-12">
+                                 <div className="row" style={{marginLeft:'2px'}}>
+                                 <label  >
+                                        <input type="radio" name="opcionEspesor" />1 3/4"</label>
+                                        <label  >
+                                        <input type="radio" name="opcionEspesor" />2"</label>
+                                 </div>
+                                       <div className="row " style={{marginLeft:'2px'}}>
+                                        <label  >
+                                        <input type="radio" name="opcionEspesor" />2 1/2"</label>
+                                        <label  >
+                                        <input type="radio" name="opcionEspesor" />3"</label>
+                                       </div>
+                                  </div>
+
+                                 <div className="col-md-3 col-sm-12">
+                                 <div className="row">
+                                 <label  >
+                                        <input type="radio" name="opcionEspesor" />1 3/4"</label>
+                                        <label  >
+                                        <input type="radio" name="opcionEspesor" />2"</label>
+                                 </div>
+                                       <div className="row">
+                                        <label  >
+                                        <input type="radio" name="opcionEspesor" />2 1/2"</label>
+                                        <label  >
+                                        <input type="radio" name="opcionEspesor" />3"</label>
+                                       </div>
+                                  </div>
+                                   <div className="col-md-3 col-sm-12">
+                                 <div className="row">
+                                 <label  >
+                                        <input type="radio" name="opcionEspesor" />1 3/4"</label>
+                                        <label  >
+                                        <input type="radio" name="opcionEspesor" />2"</label>
+                                 </div>
+                                       <div className="row">
+                                        <label  >
+                                        <input type="radio" name="opcionEspesor" />2 1/2"</label>
+                                        <label  >
+                                        <input type="radio" name="opcionEspesor" />3"</label>
+                                       </div>
+                                  </div>
+                                  <div className="col-md-3 col-sm-12">
+                                 <div className="row">
+                                 <label  >
+                                        <input type="radio" name="opcionEspesor" />1 3/4"</label>
+                                        <label  >
+                                        <input type="radio" name="opcionEspesor" />2"</label>
+                                 </div>
+                                       <div className="row">
+                                        <label  >
+                                        <input type="radio" name="opcionEspesor" />2 1/2"</label>
+                                        <label  >
+                                        <input type="radio" name="opcionEspesor" />3"</label>
+                                       </div>
+                                  </div>
+                                
+                                </div>
+                            </div>
+                            <div className="col-sm-4">
+                              <div className="thumbnail">
+                                  <img className="img-responsive" src={require('../../../images/img/cold.jpg')}/>
+                              </div>
+                            </div>
+                            </div>
+
+                            <button className="btn btn-default update" onClick={this.calcular.bind(this)}>Cotizar</button>
+                            <button className="btn btn-default update" onClick={this.props.clickPlaca}>Cerrar</button>
+                        </div>
+                    </div>
+                </div>
             </Fragment>
         )
     }

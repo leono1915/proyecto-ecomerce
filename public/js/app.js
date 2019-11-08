@@ -71726,6 +71726,9 @@ function (_Component) {
         /* posicionada en la esquina inferior derecha */
         right: '5rem'
       };
+      var marginLeft = {
+        marginLeft: '10px'
+      };
       var position = {
         position: 'relative',
 
@@ -71755,7 +71758,9 @@ function (_Component) {
         className: "col-sm-12"
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "chose_area"
-      }, this.state.metros ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", {
+        style: marginLeft
+      }, "Perfiles Viga y L\xE1mina"), this.state.metros ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         "class": "alert alert-primary",
         role: "alert"
       }, "producto solo disponible por pieza") : "", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
@@ -72041,8 +72046,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Error404; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _images_img_logo_opt_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../images/img/logo_opt.png */ "./images/img/logo_opt.png");
-/* harmony import */ var _images_img_logo_opt_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_images_img_logo_opt_png__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _images_img_logo_opt_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../images/img/logo_opt.png */ "./images/img/logo_opt.png");
+/* harmony import */ var _images_img_logo_opt_png__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_images_img_logo_opt_png__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _images_404_404_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../images/404/404.png */ "./images/404/404.png");
 /* harmony import */ var _images_404_404_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_images_404_404_png__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
@@ -72090,7 +72095,7 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         to: "/"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: _images_img_logo_opt_png__WEBPACK_IMPORTED_MODULE_4___default.a,
+        src: _images_img_logo_opt_png__WEBPACK_IMPORTED_MODULE_1___default.a,
         alt: ""
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "content-404"
@@ -72633,14 +72638,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -72688,38 +72685,6 @@ function (_Component) {
       this.setState({
         productos: this.props.productos
       });
-      this.dibujar.bind(this);
-    }
-  }, {
-    key: "dibujar",
-    value: function dibujar() {
-      var ALTURA_CANVAS = 200,
-          ANCHURA_CANVAS = 400; // Obtener el elemento del DOM
-
-      var canvas = document.getElementById('canvas');
-      canvas.width = ANCHURA_CANVAS;
-      canvas.height = ALTURA_CANVAS; // Del canvas, obtener el contexto para poder dibujar
-
-      var contexto = canvas.getContext("2d"); // Estilo de dibujo
-      // Grosor de línea
-
-      contexto.lineWidth = 5; // Color de línea
-
-      contexto.strokeStyle = "#212121"; // Color de relleno
-
-      contexto.fillStyle = "#000000"; // Las variables indican el nombre de cada argumento para
-      // la función arc
-
-      var x = 100,
-          y = 100,
-          radio = 50,
-          anguloInicio = 0,
-          anguloFin = Math.PI * 2;
-      contexto.arc(x, y, radio, anguloInicio, anguloFin); // Hacemos que se dibuje
-
-      contexto.stroke(); // Lo rellenamos
-
-      contexto.fill();
     }
   }, {
     key: "calcular",
@@ -72732,59 +72697,142 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var marginLeft = {
+        marginLeft: '10px',
+        marginTop: '20px'
+      };
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-sm-12"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("canvas", {
-        id: "canvas"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-sm-12"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "chose_area"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "alert alert-primary",
         role: "alert"
-      }, "Necesitas ayuda? chatea con nosotros y aclaramos todas tus dudas"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "user_info"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Escoja unidad de medida "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Centimetros"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "radio"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Pulgadas"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "radio"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "single_field"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Seleccione"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+      }, "Necesitas ayuda? chatea con nosotros y aclaramos todas tus dudas"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        "class": "radio-inline",
+        style: marginLeft
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "radio",
+        name: "opcionMedida"
+      }), "Pulgadas"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        "class": "radio-inline",
+        style: marginLeft
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "radio",
+        name: "opcionMedida"
+      }), "Centimetros")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+        style: marginLeft,
         onChange: this.onChange.bind(this),
         name: "nombre"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Cuadrado"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Rect\xE1ngulo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Cartab\xF3n"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Disco"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Brida"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "single_field"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Medida 1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-        onClick: this.onChange.bind(this),
-        onChange: this.onChange.bind(this),
-        name: "medida"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Medida"), (this.noRepeat = _toConsumableArray(new Set(this.state.productos.map(function (e) {
-        return e.medida;
-      }))), //console.log(noRepeat),
-      this.noRepeat.map(function (e) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          key: e,
-          value: e
-        }, e);
-      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "single_field"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Medida 2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-        onClick: this.onChange.bind(this),
-        onChange: this.onChange.bind(this),
-        name: "espesor"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Espesor "), (this.noRepeat = _toConsumableArray(new Set(this.state.productos.map(function (e) {
-        return e.espesor;
-      }))), //console.log(noRepeat),
-      this.noRepeat.map(function (e) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
-          key: e,
-          value: e
-        }, e);
-      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Cuadrado"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Rect\xE1ngulo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Cartab\xF3n"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Disco"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Brida"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        style: marginLeft
+      }, "Medida ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "number"
+      }), "   "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row",
+        style: {
+          marginTop: '20px'
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-8 col-sm-12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-3 col-sm-12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row",
+        style: {
+          marginLeft: '2px'
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "radio",
+        name: "opcionEspesor"
+      }), "1 3/4\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "radio",
+        name: "opcionEspesor"
+      }), "2\"")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row ",
+        style: {
+          marginLeft: '2px'
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "radio",
+        name: "opcionEspesor"
+      }), "2 1/2\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "radio",
+        name: "opcionEspesor"
+      }), "3\""))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-3 col-sm-12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "radio",
+        name: "opcionEspesor"
+      }), "1 3/4\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "radio",
+        name: "opcionEspesor"
+      }), "2\"")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "radio",
+        name: "opcionEspesor"
+      }), "2 1/2\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "radio",
+        name: "opcionEspesor"
+      }), "3\""))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-3 col-sm-12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "radio",
+        name: "opcionEspesor"
+      }), "1 3/4\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "radio",
+        name: "opcionEspesor"
+      }), "2\"")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "radio",
+        name: "opcionEspesor"
+      }), "2 1/2\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "radio",
+        name: "opcionEspesor"
+      }), "3\""))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-3 col-sm-12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "radio",
+        name: "opcionEspesor"
+      }), "1 3/4\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "radio",
+        name: "opcionEspesor"
+      }), "2\"")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "radio",
+        name: "opcionEspesor"
+      }), "2 1/2\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "radio",
+        name: "opcionEspesor"
+      }), "3\""))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "thumbnail"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "img-responsive",
+        src: __webpack_require__(/*! ../../../images/img/cold.jpg */ "./images/img/cold.jpg")
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "btn btn-default update",
         onClick: this.calcular.bind(this)
       }, "Cotizar"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {

@@ -219,6 +219,9 @@ export default class Cotizador extends Component {
 				right: '5rem'
 		
 		}
+		const marginLeft={
+			   marginLeft:'10px'
+		}
 	    const position={
 			position: 'relative',    /* para poder posicionar el texto de forma absoluta */
             display: 'inline-block'
@@ -243,6 +246,7 @@ export default class Cotizador extends Component {
 			<div className="row">
 				<div className="col-sm-12">
 					<div className="chose_area">
+					<h4 style={marginLeft}>Perfiles Viga y Lámina</h4>
 					{this.state.metros? <div class="alert alert-primary" role="alert">
                   producto solo disponible por pieza
                     </div>:""}
