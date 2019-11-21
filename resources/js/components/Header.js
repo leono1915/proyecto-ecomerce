@@ -18,7 +18,7 @@ export default class Header extends Component {
 
 	}
   componentDidMount(){
-	  if(this.state.productos.length===0){
+	  if(this.state.productos.length===0&&localStorage['carrito']!=null){
 		  this.setState({
 			  productos:JSON.parse(localStorage['carrito']),
 			  cantidad:JSON.parse(localStorage['carrito']).length

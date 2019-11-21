@@ -10,7 +10,8 @@ class Placas extends Component {
             piezas: false,
             tramo: false,
             productos: [],
-            tramo: 1
+            tramo: 1,
+            tipoPieza:'Cuadrado'
         }
 
 
@@ -28,7 +29,35 @@ class Placas extends Component {
 
     }
     onChange(e) {
-        console.log([e.target.value.name])
+        console.log([e.target.name])
+        switch (e.target.value) {
+            case 'Brida':
+                this.setState({
+                    tipoPieza:e.target.value
+                })
+                break;
+                case 'Cartabon':
+                this.setState({
+                    tipoPieza:e.target.value
+                })
+                break;
+                case 'Disco':
+                this.setState({
+                    tipoPieza:e.target.value
+                })
+                break;
+                case 'Rectangulo':
+                this.setState({
+                    tipoPieza:e.target.value
+                })
+                break;
+        
+            default:
+                    this.setState({
+                        tipoPieza:'Cuadrado'
+                    })
+                break;
+        }
     }
     render() {
         const marginLeft = {
@@ -38,103 +67,54 @@ class Placas extends Component {
         return (
             <Fragment>
                 <div className="row">
-                   
                     <div className="col-sm-12">
                         <div className="chose_area">
                             <div className="alert alert-primary" role="alert">
                                 Necesitas ayuda? chatea con nosotros y aclaramos todas tus dudas
-                   </div>
-                            <div className="row">
-                                <div className="col-sm-4" >
-                                    <label class="radio-inline" style={marginLeft}>
-                                        <input type="radio" name="opcionMedida" />Pulgadas</label>
-                                    <label class="radio-inline" style={marginLeft}>
-                                        <input type="radio" name="opcionMedida" />Centimetros</label>
+                               </div>
+                            <div className="row container">
+                            <div className='col-md-3 col-sm-6'>
+                                <label className='pull-right'> Unidad de Medida</label>
                                 </div>
-                                <div className="col-sm-4" >
-                                    <select  style={marginLeft} onChange={this.onChange.bind(this)}
+                                <div className="col-md-3 col-sm-6">
+                                    <div className='container'>
+                                    <label  className="radio-inline" >
+                                        <input type="radio" name="opcionMedida" />Pulgadas</label>
+                                    <label className="radio-inline">
+                                        <input  type="radio" name="opcionMedida" />Centimetros</label>
+                                </div>
+                                </div>
+                                <div className='col-md-3 col-sm-6'>
+                                <label className='pull-right'> Tipo de figura</label>
+                                </div>
+                                <div className="col-md-3 col-sm-6" >
+                                   
+                                    <select onChange={this.onChange.bind(this)}
 
                                         name="nombre">
                                         <option>Cuadrado</option>
-                                        <option>Rectángulo</option>
-                                        <option>Cartabón</option>
+                                        <option>Rectangulo</option>
+                                        <option>Cartabon</option>
                                         <option>Disco</option>
                                         <option>Brida</option>
                                     </select>
 
                                 </div>
                                 <div className="col-md-4">
-                                    <label style={marginLeft}>Medida <input type="number"   />   </label>
+                                    <label>Medida <input type="number"   />   </label>
+
+                                </div>
+                                <div className="col-md-4">
+                                    <label >Medida <input type="number"   />   </label>
 
                                 </div>
 
                             </div>
-                            <div className="row" style={{marginTop:'20px'}}>
-                            <div className="col-md-8 col-sm-12">
-                                <div className="row">
-                                <div className="col-md-3 col-sm-12">
-                                 <div className="row" style={{marginLeft:'2px'}}>
-                                 <label  >
-                                        <input type="radio" name="opcionEspesor" />1 3/4"</label>
-                                        <label  >
-                                        <input type="radio" name="opcionEspesor" />2"</label>
-                                 </div>
-                                       <div className="row " style={{marginLeft:'2px'}}>
-                                        <label  >
-                                        <input type="radio" name="opcionEspesor" />2 1/2"</label>
-                                        <label  >
-                                        <input type="radio" name="opcionEspesor" />3"</label>
-                                       </div>
-                                  </div>
-
-                                 <div className="col-md-3 col-sm-12">
-                                 <div className="row">
-                                 <label  >
-                                        <input type="radio" name="opcionEspesor" />1 3/4"</label>
-                                        <label  >
-                                        <input type="radio" name="opcionEspesor" />2"</label>
-                                 </div>
-                                       <div className="row">
-                                        <label  >
-                                        <input type="radio" name="opcionEspesor" />2 1/2"</label>
-                                        <label  >
-                                        <input type="radio" name="opcionEspesor" />3"</label>
-                                       </div>
-                                  </div>
-                                   <div className="col-md-3 col-sm-12">
-                                 <div className="row">
-                                 <label  >
-                                        <input type="radio" name="opcionEspesor" />1 3/4"</label>
-                                        <label  >
-                                        <input type="radio" name="opcionEspesor" />2"</label>
-                                 </div>
-                                       <div className="row">
-                                        <label  >
-                                        <input type="radio" name="opcionEspesor" />2 1/2"</label>
-                                        <label  >
-                                        <input type="radio" name="opcionEspesor" />3"</label>
-                                       </div>
-                                  </div>
-                                  <div className="col-md-3 col-sm-12">
-                                 <div className="row">
-                                 <label  >
-                                        <input type="radio" name="opcionEspesor" />1 3/4"</label>
-                                        <label  >
-                                        <input type="radio" name="opcionEspesor" />2"</label>
-                                 </div>
-                                       <div className="row">
-                                        <label  >
-                                        <input type="radio" name="opcionEspesor" />2 1/2"</label>
-                                        <label  >
-                                        <input type="radio" name="opcionEspesor" />3"</label>
-                                       </div>
-                                  </div>
-                                
-                                </div>
-                            </div>
+                            <div className="row container">
+                            {}
                             <div className="col-sm-4">
                               <div className="thumbnail">
-                                  <img className="img-responsive" src={require('../../../images/img/cold.jpg')}/>
+                                  <img className="img-responsive" src={require(`../../../images/img/${this.state.tipoPieza}.png`)}/>
                               </div>
                             </div>
                             </div>

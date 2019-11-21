@@ -24,7 +24,7 @@ import {withRouter, Link} from 'react-router-dom';
                   lis,
               }
         })
-        if(this.state.productos.length===0){
+        if(this.state.productos.length===0&&localStorage['carrito']!=null){
             this.setState({productos:JSON.parse(localStorage['carrito'])})
             }
         

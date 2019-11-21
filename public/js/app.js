@@ -119,6 +119,100 @@ module.exports = "/images/map.png?27b94db5a5be0bfcc13a8f922d34e576";
 
 /***/ }),
 
+/***/ "./images/img sync recursive ^\\.\\/.*\\.png$":
+/*!***************************************!*\
+  !*** ./images/img sync ^\.\/.*\.png$ ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./Brida.png": "./images/img/Brida.png",
+	"./Cartabon.png": "./images/img/Cartabon.png",
+	"./Cuadrado.png": "./images/img/Cuadrado.png",
+	"./Disco.png": "./images/img/Disco.png",
+	"./Rectangulo.png": "./images/img/Rectangulo.png",
+	"./logo.png": "./images/img/logo.png",
+	"./logo_opt.png": "./images/img/logo_opt.png"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./images/img sync recursive ^\\.\\/.*\\.png$";
+
+/***/ }),
+
+/***/ "./images/img/Brida.png":
+/*!******************************!*\
+  !*** ./images/img/Brida.png ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/Brida.png?b47dd267f5c7a8a54a8b9ef81358a873";
+
+/***/ }),
+
+/***/ "./images/img/Cartabon.png":
+/*!*********************************!*\
+  !*** ./images/img/Cartabon.png ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/Cartabon.png?360ed5ee1fe81d38aa20564371e1371b";
+
+/***/ }),
+
+/***/ "./images/img/Cuadrado.png":
+/*!*********************************!*\
+  !*** ./images/img/Cuadrado.png ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/Cuadrado.png?601ce7f9a4e0bf924b7c3735f62dba01";
+
+/***/ }),
+
+/***/ "./images/img/Disco.png":
+/*!******************************!*\
+  !*** ./images/img/Disco.png ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/Disco.png?694755f38f439161c4fd3740669eff21";
+
+/***/ }),
+
+/***/ "./images/img/Rectangulo.png":
+/*!***********************************!*\
+  !*** ./images/img/Rectangulo.png ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/Rectangulo.png?6980939671b072e7adcfa9964d610449";
+
+/***/ }),
+
 /***/ "./images/img/angulo.jpg":
 /*!*******************************!*\
   !*** ./images/img/angulo.jpg ***!
@@ -182,6 +276,17 @@ module.exports = "/images/cua.jpg?6b5c09d99b15e72f014df72a82cd0420";
 /***/ (function(module, exports) {
 
 module.exports = "/images/lamina.jpg?5c9e39f8d041236178d75f92c7e078c3";
+
+/***/ }),
+
+/***/ "./images/img/logo.png":
+/*!*****************************!*\
+  !*** ./images/img/logo.png ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/logo.png?bb713e54c77603d1530aec3957b08961";
 
 /***/ }),
 
@@ -71363,7 +71468,7 @@ function (_Component) {
         };
       });
 
-      if (this.state.productos.length === 0) {
+      if (this.state.productos.length === 0 && localStorage['carrito'] != null) {
         this.setState({
           productos: JSON.parse(localStorage['carrito'])
         });
@@ -72399,7 +72504,7 @@ function (_Component) {
   _createClass(Header, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      if (this.state.productos.length === 0) {
+      if (this.state.productos.length === 0 && localStorage['carrito'] != null) {
         this.setState({
           productos: JSON.parse(localStorage['carrito']),
           cantidad: JSON.parse(localStorage['carrito']).length
@@ -72665,16 +72770,18 @@ function (_Component) {
   _inherits(Placas, _Component);
 
   function Placas(props) {
+    var _this$state;
+
     var _this;
 
     _classCallCheck(this, Placas);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Placas).call(this, props));
-    _this.state = _defineProperty({
+    _this.state = (_this$state = {
       piezas: false,
       tramo: false,
       productos: []
-    }, "tramo", 1);
+    }, _defineProperty(_this$state, "tramo", 1), _defineProperty(_this$state, "tipoPieza", 'Cuadrado'), _this$state);
     return _this;
   }
 
@@ -72692,7 +72799,39 @@ function (_Component) {
   }, {
     key: "onChange",
     value: function onChange(e) {
-      console.log([e.target.value.name]);
+      console.log([e.target.name]);
+
+      switch (e.target.value) {
+        case 'Brida':
+          this.setState({
+            tipoPieza: e.target.value
+          });
+          break;
+
+        case 'Cartabon':
+          this.setState({
+            tipoPieza: e.target.value
+          });
+          break;
+
+        case 'Disco':
+          this.setState({
+            tipoPieza: e.target.value
+          });
+          break;
+
+        case 'Rectangulo':
+          this.setState({
+            tipoPieza: e.target.value
+          });
+          break;
+
+        default:
+          this.setState({
+            tipoPieza: 'Cuadrado'
+          });
+          break;
+      }
     }
   }, {
     key: "render",
@@ -72711,127 +72850,51 @@ function (_Component) {
         className: "alert alert-primary",
         role: "alert"
       }, "Necesitas ayuda? chatea con nosotros y aclaramos todas tus dudas"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row"
+        className: "row container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-sm-4"
+        className: "col-md-3 col-sm-6"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        "class": "radio-inline",
-        style: marginLeft
+        className: "pull-right"
+      }, " Unidad de Medida")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-3 col-sm-6"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "radio-inline"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
         name: "opcionMedida"
       }), "Pulgadas"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        "class": "radio-inline",
-        style: marginLeft
+        className: "radio-inline"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "radio",
         name: "opcionMedida"
-      }), "Centimetros")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-sm-4"
+      }), "Centimetros"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-3 col-sm-6"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "pull-right"
+      }, " Tipo de figura")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-3 col-sm-6"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-        style: marginLeft,
         onChange: this.onChange.bind(this),
         name: "nombre"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Cuadrado"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Rect\xE1ngulo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Cartab\xF3n"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Disco"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Brida"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Cuadrado"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Rectangulo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Cartabon"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Disco"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Brida"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-md-4"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        style: marginLeft
-      }, "Medida ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Medida ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "number"
+      }), "   ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Medida ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "number"
       }), "   "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row",
-        style: {
-          marginTop: '20px'
-        }
+        className: "row container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-8 col-sm-12"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-3 col-sm-12"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row",
-        style: {
-          marginLeft: '2px'
-        }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "radio",
-        name: "opcionEspesor"
-      }), "1 3/4\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "radio",
-        name: "opcionEspesor"
-      }), "2\"")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row ",
-        style: {
-          marginLeft: '2px'
-        }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "radio",
-        name: "opcionEspesor"
-      }), "2 1/2\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "radio",
-        name: "opcionEspesor"
-      }), "3\""))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-3 col-sm-12"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "radio",
-        name: "opcionEspesor"
-      }), "1 3/4\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "radio",
-        name: "opcionEspesor"
-      }), "2\"")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "radio",
-        name: "opcionEspesor"
-      }), "2 1/2\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "radio",
-        name: "opcionEspesor"
-      }), "3\""))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-3 col-sm-12"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "radio",
-        name: "opcionEspesor"
-      }), "1 3/4\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "radio",
-        name: "opcionEspesor"
-      }), "2\"")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "radio",
-        name: "opcionEspesor"
-      }), "2 1/2\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "radio",
-        name: "opcionEspesor"
-      }), "3\""))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-3 col-sm-12"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "radio",
-        name: "opcionEspesor"
-      }), "1 3/4\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "radio",
-        name: "opcionEspesor"
-      }), "2\"")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "radio",
-        name: "opcionEspesor"
-      }), "2 1/2\""), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "radio",
-        name: "opcionEspesor"
-      }), "3\""))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-sm-4"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "thumbnail"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "img-responsive",
-        src: __webpack_require__(/*! ../../../images/img/cold.jpg */ "./images/img/cold.jpg")
+        src: __webpack_require__("./images/img sync recursive ^\\.\\/.*\\.png$")("./".concat(this.state.tipoPieza, ".png"))
       })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "btn btn-default update",
         onClick: this.calcular.bind(this)
